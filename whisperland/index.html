@@ -5,57 +5,119 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>w h i s p e r l a n d</title>
   
-  <style>
+<style>
 
-body {background-color:#f0d1de;}
+* {box-sizing: border-box;}
 
-h1 {font-family: 'Lucida Console', monospace; text-align:center; font-size: 3.25rem; color:#e29fb6;
-  letter-spacing: 15px; font-weight:bold; -webkit-text-stroke: 2px #f2f3f2;}
+body {background-color:#f0d1de; background:url('pinkhearts-whimsical.gif'); margin: 0;}
 
-.welcome {background-color: #efc6d6;
-  margin: 70px auto; width: 50%;
-  padding: 20px 70px 30px; border: 10px solid #e29fb6;
-  font-family: 'Lucida Console', monospace; font-size: 1.25rem; color:#e29fb6;}
+h1 {font-family: 'Lucida Console', monospace; text-align:center; font-size: 3.25rem; color:#ac98b4;
+  letter-spacing: 15px; font-weight:bold; -webkit-text-stroke: 2px #f2f3f2; line-height: 0.25;}
+
+h2 {font-family: 'Lucida Console', monospace; text-align:center; font-size: 2rem; color:#f2f3f2;
+  letter-spacing: 10px; font-style: italic; line-height: 0.5;}
+
+ul {list-style-type: "♡ ";}
+
+.column {float: left; padding: 10px;}
+
+    .column.sidebar {width: 40%;}
+
+    .column.gameplay {width: 60%;}
+
+    .row::after {content: ""; display: table; clear: both;}
+
+.game-container {margin: 30px auto; border: 10px solid #e29fb6;
+  display: flex; width:90%; height: 85vh; flex-direction: column; overflow: hidden;}
+
+    .screen {flex-grow: 1; border: none; margin: 0; padding: 0;}
+
+.welcome {background-color: #dbcfd6;
+  margin: 30px 30px auto; 
+  padding: 20px 70px 30px; border: 10px solid #ac98b4;
+  font-family: 'Lucida Console', monospace; font-size: 1rem; color:#ac98b4;}
 
 .start {background-color: #efc6d6;
-  margin: 40px auto; width: 25%;
-  padding: 30px 30px 30px; border: 7px solid #e29fb6;
-  font-family: 'Lucida Console', monospace; text-align:center;}
+  width: 50%;
+  margin: 20px auto; 
+  padding: 20px 20px 20px; border: 7px solid #e29fb6;
+  font-family: 'Lucida Console', monospace; font-size: 1rem; color:#e29fb6; text-align:center;}
 
-a.blink {color:#e29fb6; font-size: 2rem; animation: blinker 1.5s linear infinite; text-decoration: none;}
+a {color:#e29fb6; font-weight: bold; text-decoration: none;}
+
+a:hover {color:#f2f3f2;}
+
+a.blink {color:#e29fb6; font-size: 1.5rem; animation: blinker 1.5s linear infinite; text-decoration: none;}
+
+a.blink:hover {color:#f2f3f2;}
 
 @keyframes blinker {
   50% {opacity: 0;}
 }
 
 .howtoplay {background-color: #f1b5ce;
-  margin: 70px auto; width: 50%;
+  margin: 30px 30px auto;
   padding: 70px 70px 30px; border: 10px solid #e29fb6;
   font-family: 'Lucida Console', monospace; font-size: 1.25rem; color:#f2f3f2;}
 
-  </style>
+</style>
+
+<script>
+
+function gameplay() {document.getElementById("change").innerHTML = "The game is currently running. Click the restart button in the upper right corner of the game window to start a new game from the beginning.";}
+
+</script>
 
 </head>
 
 <body>
 
+<div class="row">
+  
+<div class="column sidebar">
+
   <div class="welcome">
     <h1>whisperland</h1>
-  <p>welcome, traveller. funny you should find yourself here ... </p>
-  <p>would you like to play a game?</p>
-  <p>come dream with me.</p>
+    <h2>the game</h2>
+    <p><i>whisperland</i> is a pinterest-inspired role playing game (rpg).</p>
+    <p>system requirements:</p>
+        <ul>
+        <li>for the best experience, please navigate to <a href="whisperland">whisperland.games</a> on a desktop/laptop computer</li>
+        <li>enable javascript</li>
+        <li>expand your web browser to full screen</li>
+        </ul>
+    <p>press the button below to get started.</p>
   </div>
 
   <div class="start">
-    <a class="blink" href="https://www.pinterest.com/marykellyreed/w-h-i-s-p-e-r-l-a-n-d/" target="_blank">&#9654; start &#9664;</a>
+    <span id="change"><a target="game" class="blink" href="whisperland.html" onclick="gameplay()">&#9654; start &#9664;</a></span>
   </div>
 
   <div class="howtoplay">
-    <center>*how to play*</center>
-    <p>your journey begins when you click start, you'll be whisked to a world between worlds: a pinterest board.</p>
-    <p>have you ever been here before? beware: you can get lost here. don't scroll too long (or do, but...) every image on the first board is a portal to a piece of the game. click on the image, or hover over it, and follow the link that appears.</p>
-    <p>sometimes the game will lead you back to pinterest. you can always return to this page and start over -- <i>but sometimes it's fun to get lost -</i></p>
+    <center>*credits*</center>
+    <ul>
+        <li>background image</li>
+        <li>pinterest</li>
+    </ul>
+
+    <a data-pin-do="embedBoard" data-pin-board-width="400" data-pin-scale-height="240" data-pin-scale-width="80" href="https://www.pinterest.com/marykellyreed/w-h-i-s-p-e-r-l-a-n-d/"></a>
+
   </div>
+
+</div>
+
+<div class="column gameplay">
+
+  <div class="game-container">
+    <iframe name="game" class="screen" src="static.html"></iframe>
+  </div>
+
+</div>
+
+</div>
+
+
+<script async defer src="//assets.pinterest.com/js/pinit.js"></script>
 
 </body>
 
