@@ -55,10 +55,12 @@ a.blink:hover {color:#f2f3f2;}
   50% {opacity: 0;}
 }
 
-.howtoplay {background-color: #f1b5ce;
+.credits {background-color: #f1b5ce;
   margin: 30px 30px auto;
   padding: 70px 70px 30px; border: 10px solid #e29fb6;
   font-family: 'Lucida Console', monospace; font-size: 1.25rem; color:#f2f3f2;}
+
+  .pinboard {margin: auto;}
 
 </style>
 
@@ -79,7 +81,7 @@ function gameplay() {document.getElementById("change").innerHTML = "The game is 
   <div class="welcome">
     <h1>whisperland</h1>
     <h2>the game</h2>
-    <p><i>whisperland</i> is a pinterest-inspired role playing game (rpg).</p>
+    <p><i>whisperland</i> is a pinterest-inspired role playing game.</p>
     <p>system requirements:</p>
         <ul>
         <li>for the best experience, please navigate to <a href="whisperland">whisperland.games</a> on a desktop/laptop computer</li>
@@ -93,14 +95,16 @@ function gameplay() {document.getElementById("change").innerHTML = "The game is 
     <span id="change"><a target="game" class="blink" href="whisperland.html" onclick="gameplay()">&#9654; start &#9664;</a></span>
   </div>
 
-  <div class="howtoplay">
+  <div class="credits">
     <center>*credits*</center>
     <ul>
         <li>background image</li>
         <li>pinterest</li>
     </ul>
 
+    <div class="pinboard">
     <a data-pin-do="embedBoard" data-pin-board-width="400" data-pin-scale-height="240" data-pin-scale-width="80" href="https://www.pinterest.com/marykellyreed/w-h-i-s-p-e-r-l-a-n-d/"></a>
+    </div>
 
   </div>
 
