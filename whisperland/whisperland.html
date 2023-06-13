@@ -13,13 +13,13 @@
 
 tw-passage {font-family: 'Lucida Console', monospace; color:#d894a5;}
 
-tw-link, .enchantment-link {color:#d894a5;}
+tw-link, .enchantment-link {color:#ac98b4;}
 
-.visited {color:#d894a5;}
+.visited {color:#ac98b4;}
 
-tw-link:hover, .enchantment-link:hover {color:#a898b2;}
+tw-link:hover, .enchantment-link:hover {color:#d894a5;}
 
-.visited:hover {color:#a898b2;}
+.visited:hover {color:#d894a5;}
 
 tw-sidebar {display: none;}
 
@@ -43,10 +43,12 @@ h1 {font-family: 'Lucida Console', monospace; font-size: 4.5rem; color:#d894a5; 
 
 tw-story[tags~="titlescreen"] {background-color: #dfbec0; background-image: url('https://www.dangerous-angels.net/whisperland/whisperbg25.jpg'); background-attachment: fixed; background-position: center;}
 
-h1 {font-family: 'Lucida Console', monospace; font-size: 4.5rem; color:#d894a5; letter-spacing: 15px; font-weight:bold; -webkit-text-stroke: 2px #f2f3f2; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.title {position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align:center;}
+
+h1 {font-family: 'Lucida Console', monospace; font-size: 6em; color:#d894a5; letter-spacing: 15px; font-weight:bold; -webkit-text-stroke: 2px #f2f3f2;}
 
 /* restart button in corner */
-.restart {font-size: 0.75em; position:fixed; top: 10px; right: 10px; padding: 5px 5px 5px; border: 1.5px solid #e29fb6;}
+.restart {font-size: 0.75em; position:fixed; top: 10px; right: 10px; padding: 5px 5px 5px; border: 2px solid #ac98b4;}
 
 /* for covering pins with clickable divs */
 .pincontainer {position: relative;}
@@ -67,15 +69,15 @@ ul {list-style-type: "♡ ";}
 /* for styling cute flashing arrow selector links */
 #arrow1 {visibility: hidden;}
 
-.link1:hover #arrow1 {visibility: visible; color:#a898b2; animation: blinker 1.5s linear infinite;}
+.link1:hover #arrow1 {visibility: visible; color:#d894a5; animation: blinker 1.5s linear infinite;}
 
 #arrow2 {visibility: hidden;}
 
-.link2:hover #arrow2 {visibility: visible; color:#a898b2; animation: blinker 1.5s linear infinite;}
+.link2:hover #arrow2 {visibility: visible; color:#d894a5; animation: blinker 1.5s linear infinite;}
 
 #arrow3 {visibility: hidden;}
 
-.link3:hover #arrow3 {visibility: visible; color:#a898b2; animation: blinker 1.5s linear infinite;}
+.link3:hover #arrow3 {visibility: visible; color:#d894a5; animation: blinker 1.5s linear infinite;}
 
 @keyframes blinker {
   50% {opacity: 0;}
@@ -112,8 +114,8 @@ each image (or &quot;pin&quot;) represents a level of the game.
 &lt;span class=&quot;restart&quot;&gt;restart&lt;/span&gt; (click:&quot;restart&quot;)[(restart:)]
 ]</tw-passagedata><tw-passagedata pid="5" name="loading screen" tags="no-header loading" position="525,0" size="100,100">&lt;span class=&quot;loading&quot;&gt;loading . . .&lt;/span&gt;
 
-(after: 3s)[(goto: &quot;title screen&quot;)]</tw-passagedata><tw-passagedata pid="6" name="title screen" tags="no-header titlescreen" position="525,125" size="100,100">&lt;div class=&quot;titlebg&quot;&gt;
-&lt;h1&gt;whisperland&lt;/h1&gt;
+(after: 3s)[(goto: &quot;title screen&quot;)]</tw-passagedata><tw-passagedata pid="6" name="title screen" tags="no-header titlescreen" position="525,125" size="100,100">&lt;div class=&quot;title&quot;&gt;
+&lt;h1&gt;whisperland&lt;/h1&gt;© 2023 heartshaped games
 &lt;/div&gt;
 
 (after: 4.5s)[(goto: &quot;welcome&quot;)]</tw-passagedata><tw-passagedata pid="7" name="level 1" tags="" position="650,500" size="100,100">&lt;div class=&quot;pincontainer&quot; height=&quot;520&quot; width=&quot;236&quot;&gt;
@@ -129,9 +131,9 @@ choose a top.
 
 (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/outfits/gnometop.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;bottom&quot;)[(set:$personality to it + 2)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/outfits/witchtop.jpeg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;bottom&quot;)[(set:$personality to it + 1)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/outfits/mermaidtop.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;bottom&quot;)[(set:$personality to it + 3)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/outfits/fairytop.jpeg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;bottom&quot;)[(set:$personality to it + 5)]</tw-passagedata><tw-passagedata pid="9" name="bottom" tags="" position="900,500" size="100,100">choose a bottom
 
-(link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/outfits/gnomeshorts.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;shoes&quot;)[(set:$personality to it + 1)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/outfits/witchskirt.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;shoes&quot;)[(set:$personality to it + 2)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/outfits/mermaidsarong.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;shoes&quot;)[(set:$personality to it + 3)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/outfits/fairyskirt.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;shoes&quot;)[(set:$personality to it + 6)]</tw-passagedata><tw-passagedata pid="10" name="shoes" tags="" position="1025,500" size="100,100">choose shoes
+(link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/outfits/gnomeshorts.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;shoes&quot;)[(set:$personality to it + 1)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/outfits/fairyskirt.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;shoes&quot;)[(set:$personality to it + 6)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/outfits/witchskirt.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;shoes&quot;)[(set:$personality to it + 2)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/outfits/mermaidsarong.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;shoes&quot;)[(set:$personality to it + 3)]</tw-passagedata><tw-passagedata pid="10" name="shoes" tags="" position="1025,500" size="100,100">choose shoes
 
-(link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/outfits/gnomeshoes.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;results&quot;)[(set:$personality to it + 2)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/outfits/witchshoes.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;results&quot;)[(set:$personality to it + 4)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/outfits/mermaidshoes.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;results&quot;)[(set:$personality to it + 5)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/outfits/fairyshoes.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;results&quot;)[(set:$personality to it + 6)]</tw-passagedata><tw-passagedata pid="11" name="results" tags="" position="900,625" size="100,100">(if: $personality is &lt;=6)[(set: $creaturetype to &quot;gnome&quot;)you&#39;re a woodland gnome](if: $personality is &gt;6 and &lt;9)[(set: $creaturetype to &quot;witch&quot;)you&#39;re a kitchen witch](if: $personality is &gt;=9 and &lt;14)[(set: $creaturetype to &quot;mermaid&quot;)you&#39;re a mermaid](if: $personality is &gt;=14)[(set: $creaturetype to &quot;fairy princess&quot;)you&#39;re a fairy princess] (if: $personality is &lt;8 and is an even)[(set: $habitat to &quot;woods&quot;)in a cozy cottage deep in the woods](if: $personality is &lt;8 and is an odd)[(set: $habitat to &quot;sea&quot;)hidden away in a lagoon by the sea](if: $personality is &gt;=8 and is an even)[(set: $habitat to &quot;field&quot;)frolicking in a field of queen anne&#39;s lace and black-eyed susans](if: $personality is &gt;=8 and &lt;14 and is an odd)[(set: $habitat to &quot;sea&quot;)hidden away in a lagoon by the sea](if: $personality is &gt;=14 and is an odd)[(set: $habitat to &quot;realm&quot;)shrouded by the mists of the fairy realm] (either:&quot;conducting a dark ritual&quot;,&quot;dancing to taylor swift&quot;,&quot;enjoying a truly epic picnic&quot;)
+(link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/outfits/mermaidshoes.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;results&quot;)[(set:$personality to it + 5)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/outfits/gnomeshoes.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;results&quot;)[(set:$personality to it + 2)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/outfits/witchshoes.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;results&quot;)[(set:$personality to it + 4)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/outfits/fairyshoes.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;results&quot;)[(set:$personality to it + 6)]</tw-passagedata><tw-passagedata pid="11" name="results" tags="" position="900,625" size="100,100">(if: $personality is &lt;=6)[(set: $creaturetype to &quot;gnome&quot;)you&#39;re a woodland gnome](if: $personality is &gt;6 and &lt;9)[(set: $creaturetype to &quot;witch&quot;)you&#39;re a kitchen witch](if: $personality is &gt;=9 and &lt;14)[(set: $creaturetype to &quot;mermaid&quot;)you&#39;re a mermaid](if: $personality is &gt;=14)[(set: $creaturetype to &quot;fairy princess&quot;)you&#39;re a fairy princess] (if: $personality is &lt;8 and is an even)[(set: $habitat to &quot;woods&quot;)deep in an ancient wood](if: $personality is &lt;8 and is an odd)[(set: $habitat to &quot;sea&quot;)hidden away in a lagoon by the sea](if: $personality is &gt;=8 and is an even)[(set: $habitat to &quot;field&quot;)frolicking in a field of queen anne&#39;s lace and black-eyed susans](if: $personality is &gt;=8 and &lt;14 and is an odd)[(set: $habitat to &quot;sea&quot;)hidden away in a lagoon by the sea](if: $personality is &gt;=14 and is an odd)[(set: $habitat to &quot;realm&quot;)shrouded by the mists of the fairy realm] (either:&quot;conducting a dark ritual&quot;,&quot;dancing to taylor swift&quot;,&quot;enjoying a truly epic picnic&quot;)
 
 &lt;span class=&quot;link1&quot;&gt;&lt;span id=&quot;arrow1&quot;&gt;&amp;#9654;&lt;/span&gt; [[onwards!-&gt;interlude 1]]&lt;/span&gt;
 
@@ -163,7 +165,7 @@ oh, you&#39;re definitely a $creaturetype. i can tell from your outfit.
 or maybe you&#39;re actually (link-reveal-goto: &quot;a unicorn&quot;, &quot;you&#39;re a unicorn&quot;)[(set:$creaturetype to &quot;unicorn&quot;)]?
 
 if you feel good about being a $creaturetype after all, we can [[continue-&gt;level 2]].]
-]</tw-passagedata><tw-passagedata pid="15" name="level 2" tags="" position="650,775" size="100,100">&lt;div class=&quot;pincontainer&quot; height=&quot;456&quot; width=&quot;236&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="15" name="level 2" tags="" position="600,775" size="100,100">&lt;div class=&quot;pincontainer&quot; height=&quot;456&quot; width=&quot;236&quot;&gt;
 	&lt;iframe src=&quot;https://assets.pinterest.com/ext/embed.html?id=129689664262104323&quot; height=&quot;456&quot; width=&quot;236&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; &gt;&lt;/iframe&gt;
 	&lt;div class=&quot;coverpin&quot;&gt;
         (link-goto: &#39;&lt;img src=&quot;transparent-square.png&quot; height=&quot;520&quot; width=&quot;236&quot;&gt;&#39;, &quot;secret door&quot;)
@@ -182,30 +184,38 @@ if you feel good about being a $creaturetype after all, we can [[continue-&gt;le
 
 do you remember following secret paths? once upon a time?]
 
-(click: &quot;secret paths&quot;)[(if: $habitat is &quot;woods&quot;)[[head deeper into the woods in search of a secret path-&gt;secret paths]](if: $habitat is &quot;sea&quot;)[[i followed a secret path to this lagoon...-&gt;lagoon]](if: $habitat is &quot;field&quot;)[[i remember!-&gt;field]](if: $habitat is &quot;realm&quot;)[[i&#39;m lost in the fairy realm-&gt;fairy realm]]]</tw-passagedata><tw-passagedata pid="18" name="secret paths" tags="" position="1000,775" size="100,100">these woods must be a hundred years old. look at</tw-passagedata><tw-passagedata pid="19" name="field" tags="" position="650,900" size="100,100">(link-reveal: &quot;we&#39;re surrounded by queen anne&#39;s lace and black-eyed susans, in full bloom ...&quot;)[
+&lt;span class=&quot;link1&quot;&gt;&lt;span id=&quot;arrow1&quot;&gt;&amp;#9654;&lt;/span&gt; (click: &quot;secret paths&quot;)[(if: $habitat is &quot;woods&quot;)[[head deeper into the woods in search of a secret path-&gt;secret paths]](if: $habitat is &quot;sea&quot;)[[i remember!-&gt;lagoon]](if: $habitat is &quot;field&quot;)[[i remember!-&gt;field]](if: $habitat is &quot;realm&quot;)[[yes, i followed a secret path to the fairy realm-&gt;fairy realm]]]&lt;/span&gt;</tw-passagedata><tw-passagedata pid="18" name="secret paths" tags="" position="900,850" size="100,100">these woods must be a hundred years old. the trunks of the ancient trees are so thick, your arms can only reach halfway around them.
+
+which path would you like to take?
+
+&lt;span class=&quot;link1&quot;&gt;&lt;span id=&quot;arrow1&quot;&gt;&amp;#9654;&lt;/span&gt; [[follow the dirt path lined with bloodroot blooms, forking to the left-&gt;bloodroot path]]&lt;/span&gt;
+
+&lt;span class=&quot;link2&quot;&gt;&lt;span id=&quot;arrow2&quot;&gt;&amp;#9654;&lt;/span&gt; [[follow the purple moss-covered path, forking to the right-&gt;moss path]]&lt;/span&gt;</tw-passagedata><tw-passagedata pid="19" name="field" tags="" position="575,975" size="100,100">(link-reveal: &quot;we&#39;re surrounded by queen anne&#39;s lace and black-eyed susans, in full bloom ...&quot;)[
 
 but there are definitely no secret doors as far as the eye can see. (unless there&#39;s a door set in the ground?)
 
 do you remember following secret paths? do you remember where to find them?
-(click-append: &quot;a door set in the ground?&quot;)[ no, there&#39;s definitely no door set in the ground. nice try, though.]
-[[to the woods-&gt;entrance to the woods]]
+(click-append: &quot;a door set in the ground?&quot;)[(set: $haskey to true) no, there&#39;s definitely no door set in the ground. however, you do find a key.]
+&lt;span class=&quot;link1&quot;&gt;&lt;span id=&quot;arrow1&quot;&gt;&amp;#9654;&lt;/span&gt; [[to the woods-&gt;secret paths]]&lt;/span&gt;
 
-[[to the sea-&gt;lagoon]]
-]</tw-passagedata><tw-passagedata pid="20" name="lagoon" tags="" position="900,900" size="100,100"></tw-passagedata><tw-passagedata pid="21" name="fairy realm" tags="" position="775,900" size="100,100">oh, no. did you eat anything?
+&lt;span class=&quot;link2&quot;&gt;&lt;span id=&quot;arrow2&quot;&gt;&amp;#9654;&lt;/span&gt; [[to the sea-&gt;lagoon]]&lt;/span&gt;
+]</tw-passagedata><tw-passagedata pid="20" name="lagoon" tags="" position="775,1100" size="100,100">this lagoon is protected from the harsh winds of the sea by natural rock walls. the waves lap gently at the shore.
+
+&lt;span class=&quot;link1&quot;&gt;&lt;span id=&quot;arrow1&quot;&gt;&amp;#9654;&lt;/span&gt; [[follow path along the shore-&gt;sea]]&lt;/span&gt;
+
+&lt;span class=&quot;link2&quot;&gt;&lt;span id=&quot;arrow2&quot;&gt;&amp;#9654;&lt;/span&gt; [[follow path away from the sea-&gt;inland]]&lt;/span&gt;</tw-passagedata><tw-passagedata pid="21" name="fairy realm" tags="" position="400,875" size="100,100">oh, no. did you eat anything?
 
 &lt;span class=&quot;link1&quot;&gt;&lt;span id=&quot;arrow1&quot;&gt;&amp;#9654;&lt;/span&gt; [[of course not]]&lt;/span&gt;
 
-&lt;span class=&quot;link2&quot;&gt;&lt;span id=&quot;arrow2&quot;&gt;&amp;#9654;&lt;/span&gt; [[i had a piece of cake...-&gt;stuck]]&lt;/span&gt;</tw-passagedata><tw-passagedata pid="22" name="of course not" tags="" position="775,1025" size="100,100">phew. you know if you eat anything in the fairy realm, you&#39;ll be stuck there forever.
+&lt;span class=&quot;link2&quot;&gt;&lt;span id=&quot;arrow2&quot;&gt;&amp;#9654;&lt;/span&gt; [[i had a piece of cake...-&gt;stuck]]&lt;/span&gt;</tw-passagedata><tw-passagedata pid="22" name="of course not" tags="" position="325,1050" size="100,100">phew. you know if you eat anything in the fairy realm, you&#39;ll be stuck there forever.
 
-[[yikes, let&#39;s get out of here-&gt;field]]</tw-passagedata><tw-passagedata pid="23" name="stuck" tags="" position="900,1025" size="100,100">&lt;h2&gt;game over&lt;/h2&gt;
+[[yikes, let&#39;s get out of here-&gt;field]]</tw-passagedata><tw-passagedata pid="23" name="stuck" tags="" position="500,1200" size="100,100">&lt;h2&gt;game over&lt;/h2&gt;
 you&#39;re stuck in the fairy realm forever.
 
 
 &lt;span class=&quot;link1&quot;&gt;&lt;span id=&quot;arrow1&quot;&gt;&amp;#9654;&lt;/span&gt; (link-rerun: &quot;enjoy the fairy banquet `[external link to pinterest]`&quot;)[(open-url: &quot;https://www.pinterest.com/marykellyreed/w-h-i-s-p-e-r-l-a-n-d/the-fairy-banquet/&quot;)]&lt;/span&gt;
 
-&lt;span class=&quot;link2&quot;&gt;&lt;span id=&quot;arrow2&quot;&gt;&amp;#9654;&lt;/span&gt; start a new game (click:&quot;start a new game&quot;)[(restart:)]&lt;/span&gt;</tw-passagedata><tw-passagedata pid="24" name="entrance to the woods" tags="" position="650,1025" size="100,100">
-
-[[header deeper into the woods-&gt;secret paths]]</tw-passagedata><tw-passagedata pid="25" name="level 3" tags="" position="650,1150" size="100,100">&lt;div class=&quot;pincontainer&quot; height=&quot;454&quot; width=&quot;236&quot;&gt;
+&lt;span class=&quot;link2&quot;&gt;&lt;span id=&quot;arrow2&quot;&gt;&amp;#9654;&lt;/span&gt; start a new game (click:&quot;start a new game&quot;)[(restart:)]&lt;/span&gt;</tw-passagedata><tw-passagedata pid="24" name="level 3" tags="" position="650,1325" size="100,100">&lt;div class=&quot;pincontainer&quot; height=&quot;454&quot; width=&quot;236&quot;&gt;
     &lt;iframe src=&quot;https://assets.pinterest.com/ext/embed.html?id=129689664262104811&quot; height=&quot;454&quot; width=&quot;236&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; &gt;&lt;/iframe&gt;
     &lt;div class=&quot;coverpin&quot;&gt;
         (link-goto: &#39;&lt;img src=&quot;transparent-square.png&quot; height=&quot;454&quot; width=&quot;236&quot;&gt;&#39;, &quot;sofa&quot;)
@@ -213,20 +223,23 @@ you&#39;re stuck in the fairy realm forever.
   &lt;/div&gt;
   
   &lt;div class=&quot;level&quot;&gt;(link-goto: &quot;level 3:
-  nice place you got there&quot;, &quot;sofa&quot;)&lt;/div&gt;</tw-passagedata><tw-passagedata pid="26" name="sofa" tags="" position="775,1150" size="100,100">here we go!
+  nice place you got there&quot;, &quot;sofa&quot;)&lt;/div&gt;</tw-passagedata><tw-passagedata pid="25" name="sofa" tags="" position="775,1325" size="100,100">let&#39;s make this the cottage of your dreams!
 choose a sofa.
 
-(link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/ginghamsofa.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;after sofa&quot;)[(set:$sofa 1)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/redsofa.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;after sofa&quot;)[(set:$sofa to 2)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/pinksofa.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;after sofa&quot;)[(set:$sofa to 3)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/whitesofa.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;after sofa&quot;)[(set:$sofa to 4)]</tw-passagedata><tw-passagedata pid="27" name="after sofa" tags="" position="900,1150" size="100,100">wow, $name, (either: &quot;your cottage is looking sooo cute!&quot;, &quot;i love everything you picked out!&quot;, &quot;this cottage is starting to feel so homey!&quot;)
+(link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/ginghamsofa.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;after sofa&quot;)[(set:$sofa to 1)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/redsofa.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;after sofa&quot;)[(set:$sofa to 2)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/pinksofa.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;after sofa&quot;)[(set:$sofa to 3)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/whitesofa.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;after sofa&quot;)[(set:$sofa to 4)]</tw-passagedata><tw-passagedata pid="26" name="playlist" tags="" position="850,1450" size="100,100">wow, $name, (either: &quot;your cottage is looking sooo cute!&quot;, &quot;i love everything you picked out!&quot;, &quot;this cottage is starting to feel so homey!&quot;)
 
 thanks!!
 (click-replace: &quot;thanks!!&quot;)[here&#39;s a playlist i made for you to listen to while you cook... it&#39;s inspired by your cottage decor :)
 
 &lt;ul&gt;&lt;li&gt; (if: $sofa is 1)[taylor swift](if: $sofa is 2)[lana del ray](if: $sofa is 3)[suki waterhouse](if: $sofa is 4)[lorde]&lt;/li&gt;&lt;/ul&gt;
+
+&lt;span class=&quot;link1&quot;&gt;&lt;span id=&quot;arrow1&quot;&gt;&amp;#9654;&lt;/span&gt; (link-rerun: &quot;view all cottage decor `[external link to pinterest]`&quot;)[(open-url: &quot;https://www.pinterest.com/marykellyreed/w-h-i-s-p-e-r-l-a-n-d/_____&quot;)]&lt;/span&gt;
+
 ooh, did you notice the door on the ceiling?
 (click-append: &quot;the door on the ceiling?&quot;)[
 
 that&#39;s right - this cottage has an [[attic-&gt;level 4]]. let&#39;s check it out.]
-]</tw-passagedata><tw-passagedata pid="28" name="level 4" tags="" position="650,1275" size="100,100">&lt;div class=&quot;pincontainer&quot; height=&quot;396&quot; width=&quot;236&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="27" name="level 4" tags="" position="650,1575" size="100,100">&lt;div class=&quot;pincontainer&quot; height=&quot;396&quot; width=&quot;236&quot;&gt;
     &lt;iframe src=&quot;https://assets.pinterest.com/ext/embed.html?id=129689664262105497&quot; height=&quot;396&quot; width=&quot;236&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; &gt;&lt;/iframe&gt;
     &lt;div class=&quot;coverpin&quot;&gt;
         (link-goto: &#39;&lt;img src=&quot;transparent-square.png&quot; height=&quot;396&quot; width=&quot;236&quot;&gt;&#39;, &quot;attic&quot;)
@@ -234,35 +247,125 @@ that&#39;s right - this cottage has an [[attic-&gt;level 4]]. let&#39;s check it
   &lt;/div&gt;
   
   &lt;div class=&quot;level&quot;&gt;(link-goto: &quot;level 4:
-  the attic game&quot;, &quot;attic&quot;)&lt;/div&gt;</tw-passagedata><tw-passagedata pid="29" name="attic" tags="" position="775,1275" size="100,100">wow, whoever lived here before left a lot of stuff behind in this attic.
+  the attic game&quot;, &quot;attic&quot;)&lt;/div&gt;</tw-passagedata><tw-passagedata pid="28" name="attic" tags="" position="775,1575" size="100,100">wow, whoever lived here before left a lot of stuff behind in this attic.
 
 (click: &quot;stuff&quot;)[want to poke around?
 
 &lt;span class=&quot;link1&quot;&gt;&lt;span id=&quot;arrow1&quot;&gt;&amp;#9654;&lt;/span&gt; [[let&#39;s look in that old trunk-&gt;trunk]]&lt;/span&gt;
 
-&lt;span class=&quot;link2&quot;&gt;&lt;span id=&quot;arrow2&quot;&gt;&amp;#9654;&lt;/span&gt; [[nah, let&#39;s just give it all away-&gt;interlude 2]]&lt;/span&gt;]</tw-passagedata><tw-passagedata pid="30" name="trunk" tags="" position="900,1275" size="100,100">the trunk is very old. it&#39;s made of brown leather that&#39;s cracked and crumbling away in places.
+&lt;span class=&quot;link2&quot;&gt;&lt;span id=&quot;arrow2&quot;&gt;&amp;#9654;&lt;/span&gt; [[nah, let&#39;s just give it all away-&gt;interlude 2]]&lt;/span&gt;]</tw-passagedata><tw-passagedata pid="29" name="trunk" tags="" position="900,1575" size="100,100">the trunk is very old. it&#39;s made of brown leather that&#39;s cracked and crumbling away in places.
 
 there&#39;s a keyhole on the front. (click: &quot;keyhole&quot;)[(if: $haskey is true)[i wonder if that key you found will work?
 
 (link: &quot;try the key&quot;)[the key turns. the trunk groans open!
 
-you find an antique [[doll]].]] (if: $haskey is false)[hmmm, it looks like the trunk is locked. [[too bad.-&gt;interlude 2]]]]</tw-passagedata><tw-passagedata pid="31" name="doll" tags="" position="1025,1275" size="100,100">can i tell you a story?
+you find an antique [[doll]].]] (if: $haskey is false)[hmmm, it looks like the trunk is locked. [[too bad.-&gt;interlude 2]]]]</tw-passagedata><tw-passagedata pid="30" name="doll" tags="" position="1025,1575" size="100,100">can i tell you a story?
 
 (click: &quot;story&quot;)[when i was in second grade, i dreamed of owning [[an american girl doll-&gt;dollstory]].]
 
 the catalogs would come to our house, and my sister and i had to wait for each other; we couldn&#39;t look at the new pictures without each other.
 
-we had [[show and tell-&gt;dressed]] at school. i didn&#39;t have a doll - yet - but i brought one of my precious catalogs.</tw-passagedata><tw-passagedata pid="32" name="dollstory" tags="" position="1150,1275" size="100,100"></tw-passagedata><tw-passagedata pid="33" name="interlude 2" tags="" position="775,1400" size="100,100"></tw-passagedata><tw-passagedata pid="34" name="dressed" tags="" position="1087.5,1400" size="100,100"></tw-passagedata><tw-passagedata pid="35" name="unicorn name" tags="" position="1400,625" size="100,100">since you&#39;re a unicorn now, maybe you&#39;d like to change your name, too?
+we had [[show and tell-&gt;dressed]] at school. i didn&#39;t have a doll - yet - but i brought one of my precious catalogs.</tw-passagedata><tw-passagedata pid="31" name="dollstory" tags="" position="1200,1600" size="100,100"></tw-passagedata><tw-passagedata pid="32" name="interlude 2" tags="" position="850,1750" size="100,100">we got a lot done today, $name!  let&#39;s take a break.
+
+(click: &quot;take a break&quot;)[
+]</tw-passagedata><tw-passagedata pid="33" name="dressed" tags="" position="1075,1725" size="100,100"></tw-passagedata><tw-passagedata pid="34" name="unicorn name" tags="" position="1400,625" size="100,100">since you&#39;re a unicorn now, maybe you&#39;d like to change your name, too?
 
 [[no thanks, you can keep calling me $name-&gt;no thanks]]
 
-[[ooh, ok, i&#39;d love to pick a unicorn name!-&gt;new name]]</tw-passagedata><tw-passagedata pid="36" name="no thanks" tags="" position="1400,750" size="100,100">sounds good, $name! [[onwards!-&gt;level 2]]</tw-passagedata><tw-passagedata pid="37" name="new name" tags="" position="1525,750" size="100,100">great. pick your new unicorn name below!
+[[ooh, ok, i&#39;d love to pick a unicorn name!-&gt;new name]]</tw-passagedata><tw-passagedata pid="35" name="no thanks" tags="" position="1400,750" size="100,100">sounds good, $name! [[onwards!-&gt;level 2]]</tw-passagedata><tw-passagedata pid="36" name="new name" tags="" position="1525,750" size="100,100">great. pick your new unicorn name below!
 
 (dropdown: bind $name, &quot;lavender&quot;, &quot;rainbow&quot;, &quot;sparkle&quot;, &quot;penelope&quot;, &quot;sunbeam&quot;, &quot;jewel&quot;, &quot;sheila&quot;)
 
 (link: &quot;continue&quot;)[your name is now $name. love that for you.
 
-[[thanks!-&gt;level 2]]]</tw-passagedata></tw-storydata>
+[[thanks!-&gt;level 2]]]</tw-passagedata><tw-passagedata pid="37" name="bloodroot path" tags="" position="1050,900" size="100,100">the path meanders deeper into the forest. the birds call to one another somewhere far above your head. you wonder where this path is leading.
+
+(click: &quot;where this path is leading&quot;)[eventually, the woods around you become brighter. there&#39;s a clearing up ahead.
+
+(click: &quot;clearing&quot;)[in the center of the clearing, there&#39;s a ring of spotted toadstools. a group of fairies inside the ring is having an enchanted tea party.
+
+&lt;span class=&quot;link1&quot;&gt;&lt;span id=&quot;arrow1&quot;&gt;&amp;#9654;&lt;/span&gt; [[join the fairies&#39; tea party-&gt;stuck]]&lt;/span&gt;
+
+&lt;span class=&quot;link2&quot;&gt;&lt;span id=&quot;arrow2&quot;&gt;&amp;#9654;&lt;/span&gt; [[continue through the clearing to the path on the other side-&gt;path to woodland cottage]]&lt;/span&gt;
+
+]
+]</tw-passagedata><tw-passagedata pid="38" name="moss path" tags="" position="1200,825" size="100,100">the temperature drops slightly. a butterfly floats lazily along the breeze.
+
+(click: &quot;lazily&quot;)[(display: &quot;path to woodland cottage&quot;)]</tw-passagedata><tw-passagedata pid="39" name="path to woodland cottage" tags="" position="1400,875" size="100,100">(set: $cottage to &quot;woodland&quot;)we continue along the path. it slopes gently downhill.
+
+(click: &quot;downhill&quot;)[look! it&#39;s your new home!
+
+(click: &quot;new home&quot;)[there&#39;s a tiny, lovely cottage in the clearing up ahead. it&#39;s made of rounded stones and weathered wood, like something out of a fairy tale. and it&#39;s [[all yours...-&gt;level 3]]
+]
+]</tw-passagedata><tw-passagedata pid="40" name="sea" tags="" position="1075,1025" size="100,100">there&#39;s a cave in the rock wall ahead.
+
+&lt;span class=&quot;link1&quot;&gt;&lt;span id=&quot;arrow1&quot;&gt;&amp;#9654;&lt;/span&gt; [[let&#39;s check out the cave-&gt;cave]]&lt;/span&gt;
+
+&lt;span class=&quot;link2&quot;&gt;&lt;span id=&quot;arrow2&quot;&gt;&amp;#9654;&lt;/span&gt; [[continue down along the shore-&gt;path to sea cottage]]&lt;/span&gt;</tw-passagedata><tw-passagedata pid="41" name="inland" tags="" position="950,1175" size="100,100">we hike up a rocky path, lined with seagrass. seagulls cry overhead.
+
+when we reach the top, an ancient, old-growth forest is visible in the distance.
+
+(link: &quot;continue to the forest&quot;)[(display: &quot;secret paths&quot;)]</tw-passagedata><tw-passagedata pid="42" name="cave" tags="" position="1225,1150" size="100,100">the entrance to the cave is narrow, but we squeeze through.
+
+(click: &quot;squeeze&quot;)[it&#39;s very dark in this cave.
+|options&gt;[
+[light a match]&lt;match|
+
+(unless: $haskey is true)[[try venturing deeper into the cave by touch]&lt;venture|]
+]
+(click: ?match)[(replace: ?options)(display:&quot;match&quot;)]
+(click: ?venture)[(replace: ?options)(display:&quot;venture&quot;)]
+]
+</tw-passagedata><tw-passagedata pid="43" name="path to sea cottage" tags="" position="1600,1000" size="100,100">(set: $cottage to &quot;beach&quot;)we continue along the edge of the lagoon. there&#39;s an opening in the rock wall.
+
+(click: &quot;opening&quot;)[beyond the lagoon, a pristine beach stretches off into the distance.
+
+look! it&#39;s your new home!
+
+(click: &quot;new home&quot;)[there&#39;s a tiny cottage up ahead. the walls are made of weathered wood and the roof is covered in tiny pebbles. it&#39;s [[all yours...-&gt;level 3]]
+]
+]</tw-passagedata><tw-passagedata pid="44" name="match" tags="" position="1350,1150" size="100,100">
+you strike a match. the interior of the cave is briefly illuminated - the walls sparkle in the light.
+
+(click: &quot;sparkle&quot;)[it&#39;s just fool&#39;s gold, though.
+
+[[head back to the shore.-&gt;path to sea cottage]]]</tw-passagedata><tw-passagedata pid="45" name="venture" tags="" position="1475,1150" size="100,100">
+the cave walls are cool and damp. they become colder as we continue deeper.
+
+(click: &quot;continue deeper&quot;)[are you sure you want to keep going? it could be dangerous.
+
+|options2&gt;[
+[let&#39;s keep going!]&lt;chamber|
+
+[[let&#39;s get out of here!-&gt;path to sea cottage]]
+]
+]
+
+(click: ?chamber)[(replace: ?options2)(display:&quot;cave chamber&quot;)]</tw-passagedata><tw-passagedata pid="46" name="cave chamber" tags="" position="1600,1150" size="100,100">ok, we&#39;ll go a little deeper.
+
+(click: &quot;a little deeper&quot;)[the cave gets colder as we travel further in, and it seems like the walls are getting cozier.
+
+can you see that light ahead, though?
+
+(click: &quot;light&quot;)[the narrow cave passageway gets brighter with each step, until it opens up onto a chamber.
+
+(click: &quot;chamber&quot;)[there&#39;s a key in the center of the chamber.
+
+|options3&gt;[
+[take the key]&lt;key|
+
+[leave the key behind]&lt;nokey|
+]
+]
+]
+]
+
+(click: ?key)[(set: $haskey to true)(replace: ?options3)(display:&quot;get key&quot;)]
+(click: ?nokey)[(set: $haskey to false)(replace: ?options3)(display:&quot;no key&quot;)]</tw-passagedata><tw-passagedata pid="47" name="get key" tags="" position="1725,1100" size="100,100">
+now you have a key! nice.
+
+[[let&#39;s get out of this cave-&gt;path to sea cottage]]</tw-passagedata><tw-passagedata pid="48" name="no key" tags="" position="1725,1225" size="100,100">
+[[let&#39;s get out of this cave-&gt;path to sea cottage]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
