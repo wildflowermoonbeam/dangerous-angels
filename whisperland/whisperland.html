@@ -43,9 +43,9 @@ h1 {font-family: 'Lucida Console', monospace; font-size: 4.5rem; color:#d894a5; 
 
 tw-story[tags~="titlescreen"] {background-color: #dfbec0; background-image: url('https://www.dangerous-angels.net/whisperland/whisperbg25.jpg'); background-attachment: fixed; background-position: center;}
 
-.title {position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align:center;}
+.title {position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;}
 
-h1 {font-family: 'Lucida Console', monospace; font-size: 6em; color:#d894a5; letter-spacing: 15px; font-weight:bold; -webkit-text-stroke: 2px #f2f3f2;}
+h1 {font-family: 'Lucida Console', monospace; font-size: 6em; color: #ac98b4; letter-spacing: 15px; font-weight:bold; -webkit-text-stroke: 2px #f2f3f2;}
 
 /* restart button in corner */
 .restart {font-size: 0.75em; position:fixed; top: 10px; right: 10px; padding: 5px 5px 5px; border: 2px solid #ac98b4;}
@@ -224,16 +224,22 @@ you&#39;re stuck in the fairy realm forever.
   
   &lt;div class=&quot;level&quot;&gt;(link-goto: &quot;level 3:
   nice place you got there&quot;, &quot;sofa&quot;)&lt;/div&gt;</tw-passagedata><tw-passagedata pid="25" name="sofa" tags="" position="775,1325" size="100,100">let&#39;s make this the cottage of your dreams!
-choose a sofa.
+choose a sofa
 
-(link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/ginghamsofa.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;after sofa&quot;)[(set:$sofa to 1)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/redsofa.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;after sofa&quot;)[(set:$sofa to 2)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/pinksofa.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;after sofa&quot;)[(set:$sofa to 3)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/whitesofa.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;after sofa&quot;)[(set:$sofa to 4)]</tw-passagedata><tw-passagedata pid="26" name="playlist" tags="" position="850,1450" size="100,100">wow, $name, (either: &quot;your cottage is looking sooo cute!&quot;, &quot;i love everything you picked out!&quot;, &quot;this cottage is starting to feel so homey!&quot;)
+(link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/ginghamsofa.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;candle&quot;)[(set:$sofa to 1)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/redsofa.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;candle&quot;)[(set:$sofa to 2)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/pinksofa.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;candle&quot;)[(set:$sofa to 3)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/whitesofa.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;candle&quot;)[(set:$sofa to 4)]</tw-passagedata><tw-passagedata pid="26" name="playlist" tags="" position="850,1450" size="100,100">wow, $name, (either: &quot;your cottage is looking sooo cute!&quot;, &quot;i love everything you picked out!&quot;, &quot;this cottage is starting to feel so homey!&quot;) (if: $candle is 4)[will you buy me that candle for my birthday? ;)]
 
 thanks!!
 (click-replace: &quot;thanks!!&quot;)[here&#39;s a playlist i made for you to listen to while you cook... it&#39;s inspired by your cottage decor :)
 
-&lt;ul&gt;&lt;li&gt; (if: $sofa is 1)[taylor swift](if: $sofa is 2)[lana del ray](if: $sofa is 3)[suki waterhouse](if: $sofa is 4)[lorde]&lt;/li&gt;&lt;/ul&gt;
+&lt;ul&gt;&lt;li&gt; (if: $sofa is 1)[highway don&#39;t care - tim mcgraw, taylor swift, keith urban](if: $sofa is 2)[red (taylor&#39;s version) - taylor swift](if: $sofa is 3)[cruel summer - taylor swift](if: $sofa is 4)[video games - lana del rey]&lt;/li&gt;
+&lt;li&gt; (if: $candle is 1)[seven - taylor swift](if: $candle is 2)[this is what makes us girls - lana del rey](if: $candle is 3)[all too well (10 minute version) (taylor&#39;s version) (from the vault) - taylor swift](if: $candle is 4)[la vie en rose - aoi teshima]&lt;/li&gt;
+&lt;li&gt; (if: $dishes is 1)[nothing new (feat. phoebe bridgers) (taylor&#39;s version) (from the vault) - taylor swift, phoebe bridgers](if: $dishes is 2)[young and beautiful - lana del rey](if: $dishes is 3)[diet mountain dew - lana del rey](if: $dishes is 4)[wish on an eyelash - mallrat]&lt;/li&gt;
+&lt;li&gt; (if: $bedding is 1)[the 1 - taylor swift](if: $bedding is 2)[champagne problems - taylor swift](if: $bedding is 3)[say yes to heaven - lana del rey](if: $bedding is 4)[august - the long pond studio sessions - taylor swift]&lt;/li&gt;&lt;/ul&gt;
 
-&lt;span class=&quot;link1&quot;&gt;&lt;span id=&quot;arrow1&quot;&gt;&amp;#9654;&lt;/span&gt; (link-rerun: &quot;view all cottage decor `[external link to pinterest]`&quot;)[(open-url: &quot;https://www.pinterest.com/marykellyreed/w-h-i-s-p-e-r-l-a-n-d/_____&quot;)]&lt;/span&gt;
+&lt;span class=&quot;link1&quot;&gt;&lt;span id=&quot;arrow1&quot;&gt;&amp;#9654;&lt;/span&gt; (link-rerun: &quot;view all cottage decor `[external link to pinterest]`&quot;)[(open-url: &quot;https://www.pinterest.com/marykellyreed/w-h-i-s-p-e-r-l-a-n-d/cottage-decor/&quot;)]&lt;/span&gt;
+
+&lt;span class=&quot;link2&quot;&gt;&lt;span id=&quot;arrow2&quot;&gt;&amp;#9654;&lt;/span&gt; (link-rerun: &quot;official whisperland playlist `[external link to spotify]`&quot;)[(open-url: &quot;https://open.spotify.com/playlist/5GkNCr48yAGGuMWcLHW2r3?si=819c7cea321c4e64&quot;)]&lt;/span&gt;
+
 
 ooh, did you notice the door on the ceiling?
 (click-append: &quot;the door on the ceiling?&quot;)[
@@ -365,7 +371,13 @@ can you see that light ahead, though?
 now you have a key! nice.
 
 [[let&#39;s get out of this cave-&gt;path to sea cottage]]</tw-passagedata><tw-passagedata pid="48" name="no key" tags="" position="1725,1225" size="100,100">
-[[let&#39;s get out of this cave-&gt;path to sea cottage]]</tw-passagedata></tw-storydata>
+[[let&#39;s get out of this cave-&gt;path to sea cottage]]</tw-passagedata><tw-passagedata pid="49" name="dishes" tags="" position="1025,1325" size="100,100">choose some plates for all those delicious meals you&#39;ll be cooking
+
+(link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/blueplates.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;bedding&quot;)[(set:$plates to 1)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/glassplates.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;bedding&quot;)[(set:$plates to 2)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/lemonplates.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;bedding&quot;)[(set:$plates to 3)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/botanicalplates.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;bedding&quot;)[(set:$plates to 4)]</tw-passagedata><tw-passagedata pid="50" name="candle" tags="" position="900,1325" size="100,100">choose a fancy candle
+
+(link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/byredocandle.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;dishes&quot;)[(set:$candle to 1)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/diorcandle.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;dishes&quot;)[(set:$candle to 2)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/diptyquecandle.jpeg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;dishes&quot;)[(set:$candle to 3)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/ruecandle.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;dishes&quot;)[(set:$candle to 4)]</tw-passagedata><tw-passagedata pid="51" name="bedding" tags="" position="1150,1325" size="100,100">choose a place to keep dreaming ...
+
+(link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/greybed.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;playlist&quot;)[(set:$bedding to 1)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/royalbed.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;playlist&quot;)[(set:$bedding to 2)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/whitebed.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;playlist&quot;)[(set:$bedding to 3)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/yellowbed.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;playlist&quot;)[(set:$bedding to 4)]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
