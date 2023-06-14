@@ -105,7 +105,11 @@ ul {list-style-type: "♡ ";}
 
 .treasure {float: left; padding: 3px;}
 
-.price {color:#ffffff; position:absolute; bottom:15%; left:50%; transform: translate(-50%, -50%);}
+.price {color:#000; font-size: 1.25em; font-weight:bold; -webkit-text-stroke: 1.5px #fff; position:absolute; bottom:15%; left:50%; transform: translate(-50%, -50%);}
+
+/* hotels */
+
+.hotel {width: 200px; height: 200px; padding: 5px; object-fit: cover;}
 
 /* game over */
 h2 {font-family: 'Lucida Console', monospace; font-size: 3rem; color:#d894a5; letter-spacing: 10px; font-weight:bold; text-align: center;}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="header" color="purple"></tw-tag><tw-tag name="no-header" color="red"></tw-tag><tw-tag name="debug-startup" color="yellow"></tw-tag><tw-passagedata pid="1" name="welcome" tags="no-header" position="525,250" size="100,100">welcome, traveller. what&#39;s your name?
@@ -275,24 +279,33 @@ there&#39;s a keyhole on the front. (click: &quot;keyhole&quot;)[(if: $haskey is
 
 you find an antique [[doll]] and $100 in pennies.]] (if: $haskey is false)[hmmm, it looks like the trunk is locked. [[too bad.-&gt;interlude 2]]]]</tw-passagedata><tw-passagedata pid="29" name="doll" tags="" position="1025,1575" size="100,100">can i tell you a story?
 
-(click: &quot;story&quot;)[when i was in second grade, i dreamed of owning [[an american girl doll-&gt;dollstory]].]
+(click: &quot;story&quot;)[when i was in second grade, i dreamed of owning an american girl doll.
 
-the catalogs would come to our house, and my sister and i had to wait for each other; we couldn&#39;t look at the new pictures without each other.
+(click: &quot;american girl doll&quot;)[the catalogs would come to our house, and my sister and i had to wait for each other; we couldn&#39;t look at the new pictures without each other. we&#39;d build our dream wish lists by circling the images and putting our initials, M, E, next to doll-sized dresses and doll-sized beds and doll-sized petit fours.
 
-we had [[show and tell-&gt;dressed]] at school. i didn&#39;t have a doll - yet - but i brought one of my precious catalogs.</tw-passagedata><tw-passagedata pid="30" name="dollstory" tags="" position="1350,1525" size="100,100"></tw-passagedata><tw-passagedata pid="31" name="interlude 2" tags="" position="850,1750" size="100,100">ready to [[whip something up in the kitchen-&gt;level 5]]?</tw-passagedata><tw-passagedata pid="32" name="dressed" tags="" position="1225,1625" size="100,100"></tw-passagedata><tw-passagedata pid="33" name="unicorn" tags="" position="1400,625" size="100,100">surprise! you&#39;re a unicorn!
+(click: &quot;catalogs&quot;)[we had show and tell at school. i didn&#39;t have a doll - yet - but i brought one of my precious catalogs.
+
+(click: &quot;show and tell&quot;)[i was so excited to show the class this precious object; this sacred space that held my dreams.
+
+(click: &quot;the class&quot;)[you have to be careful [[who-&gt;boy]] you let into those spaces, though, don&#39;t you?
+]
+]
+]
+]
+]</tw-passagedata><tw-passagedata pid="30" name="interlude 2" tags="" position="750,1725" size="100,100">ready to [[whip something up in the kitchen-&gt;level 5]]?</tw-passagedata><tw-passagedata pid="31" name="unicorn" tags="" position="1400,625" size="100,100">surprise! you&#39;re a unicorn!
 
 (click: &quot;you&#39;re a unicorn&quot;)[since you&#39;re a unicorn now, maybe you&#39;d like to change your name, too?
 
 [[no thanks, you can keep calling me $name-&gt;no thanks]]
 
 [[ooh, ok, i&#39;d love to pick a unicorn name!-&gt;new name]]
-]</tw-passagedata><tw-passagedata pid="34" name="no thanks" tags="" position="1400,750" size="100,100">sounds good, $name! [[onwards!-&gt;level 2]]</tw-passagedata><tw-passagedata pid="35" name="new name" tags="" position="1525,750" size="100,100">great. pick your new unicorn name below!
+]</tw-passagedata><tw-passagedata pid="32" name="no thanks" tags="" position="1400,750" size="100,100">sounds good, $name! [[onwards!-&gt;level 2]]</tw-passagedata><tw-passagedata pid="33" name="new name" tags="" position="1525,750" size="100,100">great. pick your new unicorn name below!
 
 (dropdown: bind $name, &quot;lavender&quot;, &quot;rainbow&quot;, &quot;sparkle&quot;, &quot;penelope&quot;, &quot;sunbeam&quot;, &quot;jewel&quot;, &quot;sheila&quot;)
 
 (link: &quot;continue&quot;)[your name is now $name. love that for you.
 
-[[thanks!-&gt;level 2]]]</tw-passagedata><tw-passagedata pid="36" name="bloodroot path" tags="" position="1050,900" size="100,100">the path meanders deeper into the forest. the birds call to one another somewhere far above your head. you wonder where this path is leading.
+[[thanks!-&gt;level 2]]]</tw-passagedata><tw-passagedata pid="34" name="bloodroot path" tags="" position="1050,900" size="100,100">the path meanders deeper into the forest. the birds call to one another somewhere far above your head. you wonder where this path is leading.
 
 (click: &quot;where this path is leading&quot;)[eventually, the woods around you become brighter. there&#39;s a clearing up ahead.
 
@@ -303,23 +316,23 @@ we had [[show and tell-&gt;dressed]] at school. i didn&#39;t have a doll - yet -
 &lt;span class=&quot;link2&quot;&gt;&lt;span id=&quot;arrow2&quot;&gt;&amp;#9654;&lt;/span&gt; [[continue through the clearing to the path on the other side-&gt;path to woodland cottage]]&lt;/span&gt;
 
 ]
-]</tw-passagedata><tw-passagedata pid="37" name="moss path" tags="" position="1200,825" size="100,100">the temperature drops slightly. a butterfly floats lazily along the breeze.
+]</tw-passagedata><tw-passagedata pid="35" name="moss path" tags="" position="1200,825" size="100,100">the temperature drops slightly. a butterfly floats lazily along the breeze.
 
-(click: &quot;floats lazily along the breeze&quot;)[(display: &quot;path to woodland cottage&quot;)]</tw-passagedata><tw-passagedata pid="38" name="path to woodland cottage" tags="" position="1400,875" size="100,100">(set: $cottage to &quot;woodland&quot;)we continue along the path. it slopes gently downhill.
+(click: &quot;floats lazily along the breeze&quot;)[(display: &quot;path to woodland cottage&quot;)]</tw-passagedata><tw-passagedata pid="36" name="path to woodland cottage" tags="" position="1400,875" size="100,100">(set: $cottage to &quot;woodland&quot;)we continue along the path. it slopes gently downhill.
 
 (click: &quot;downhill&quot;)[look! it&#39;s your new home!
 
 (click: &quot;new home&quot;)[there&#39;s a tiny, lovely cottage in the clearing up ahead. it&#39;s made of rounded stones and weathered wood, like something out of a fairy tale. and it&#39;s [[all yours...-&gt;level 3]]
 ]
-]</tw-passagedata><tw-passagedata pid="39" name="sea" tags="" position="1075,1025" size="100,100">there&#39;s a cave in the rock wall ahead.
+]</tw-passagedata><tw-passagedata pid="37" name="sea" tags="" position="1075,1025" size="100,100">there&#39;s a cave in the rock wall ahead.
 
 &lt;span class=&quot;link1&quot;&gt;&lt;span id=&quot;arrow1&quot;&gt;&amp;#9654;&lt;/span&gt; [[let&#39;s check out the cave-&gt;cave]]&lt;/span&gt;
 
-&lt;span class=&quot;link2&quot;&gt;&lt;span id=&quot;arrow2&quot;&gt;&amp;#9654;&lt;/span&gt; [[continue down along the shore-&gt;path to sea cottage]]&lt;/span&gt;</tw-passagedata><tw-passagedata pid="40" name="inland" tags="" position="950,1175" size="100,100">we hike up a rocky path, lined with seagrass. seagulls cry overhead.
+&lt;span class=&quot;link2&quot;&gt;&lt;span id=&quot;arrow2&quot;&gt;&amp;#9654;&lt;/span&gt; [[continue down along the shore-&gt;path to sea cottage]]&lt;/span&gt;</tw-passagedata><tw-passagedata pid="38" name="inland" tags="" position="950,1175" size="100,100">we hike up a rocky path, lined with seagrass. seagulls cry overhead.
 
 when we reach the top, an ancient, old-growth forest is visible in the distance.
 
-(link: &quot;continue to the forest&quot;)[(display: &quot;secret paths&quot;)]</tw-passagedata><tw-passagedata pid="41" name="cave" tags="" position="1225,1150" size="100,100">the entrance to the cave is narrow, but we squeeze through.
+(link: &quot;continue to the forest&quot;)[(display: &quot;secret paths&quot;)]</tw-passagedata><tw-passagedata pid="39" name="cave" tags="" position="1225,1150" size="100,100">the entrance to the cave is narrow, but we squeeze through.
 
 (click: &quot;squeeze&quot;)[it&#39;s very dark in this cave.
 |options&gt;[
@@ -330,7 +343,7 @@ when we reach the top, an ancient, old-growth forest is visible in the distance.
 (click: ?match)[(replace: ?options)(display:&quot;match&quot;)]
 (click: ?venture)[(replace: ?options)(display:&quot;venture&quot;)]
 ]
-</tw-passagedata><tw-passagedata pid="42" name="path to sea cottage" tags="" position="1600,1000" size="100,100">(set: $cottage to &quot;beach&quot;)we continue along the edge of the lagoon. there&#39;s an opening in the rock wall.
+</tw-passagedata><tw-passagedata pid="40" name="path to sea cottage" tags="" position="1600,1000" size="100,100">(set: $cottage to &quot;beach&quot;)we continue along the edge of the lagoon. there&#39;s an opening in the rock wall.
 
 (click: &quot;opening&quot;)[beyond the lagoon, a pristine beach stretches off into the distance.
 
@@ -338,12 +351,12 @@ look! it&#39;s your new home!
 
 (click: &quot;new home&quot;)[there&#39;s a tiny cottage up ahead. the walls are made of weathered wood and the roof is covered in tiny pebbles. it&#39;s [[all yours...-&gt;level 3]]
 ]
-]</tw-passagedata><tw-passagedata pid="43" name="match" tags="" position="1350,1150" size="100,100">
+]</tw-passagedata><tw-passagedata pid="41" name="match" tags="" position="1350,1150" size="100,100">
 you strike a match. the interior of the cave is briefly illuminated - the walls sparkle in the light.
 
 (click: &quot;sparkle&quot;)[it&#39;s just fool&#39;s gold, though.
 
-[[head back to the shore.-&gt;path to sea cottage]]]</tw-passagedata><tw-passagedata pid="44" name="venture" tags="" position="1475,1150" size="100,100">
+[[head back to the shore.-&gt;path to sea cottage]]]</tw-passagedata><tw-passagedata pid="42" name="venture" tags="" position="1475,1150" size="100,100">
 the cave walls are cool and damp. they become colder as we continue deeper.
 
 (click: &quot;continue deeper&quot;)[are you sure you want to keep going? it could be dangerous.
@@ -355,7 +368,7 @@ the cave walls are cool and damp. they become colder as we continue deeper.
 ]
 ]
 
-(click: ?chamber)[(replace: ?options2)(display:&quot;cave chamber&quot;)]</tw-passagedata><tw-passagedata pid="45" name="cave chamber" tags="" position="1600,1150" size="100,100">ok, we&#39;ll go a little deeper.
+(click: ?chamber)[(replace: ?options2)(display:&quot;cave chamber&quot;)]</tw-passagedata><tw-passagedata pid="43" name="cave chamber" tags="" position="1600,1150" size="100,100">ok, we&#39;ll go a little deeper.
 
 (click: &quot;a little deeper&quot;)[the cave gets colder as we travel further in, and it seems like the walls are getting cozier.
 
@@ -375,17 +388,17 @@ can you see that light ahead, though?
 ]
 
 (click: ?key)[(set: $haskey to true)(replace: ?options3)(display:&quot;get key&quot;)]
-(click: ?nokey)[(set: $haskey to false)(replace: ?options3)(display:&quot;no key&quot;)]</tw-passagedata><tw-passagedata pid="46" name="get key" tags="" position="1725,1100" size="100,100">
+(click: ?nokey)[(set: $haskey to false)(replace: ?options3)(display:&quot;no key&quot;)]</tw-passagedata><tw-passagedata pid="44" name="get key" tags="" position="1725,1100" size="100,100">
 now you have a key! nice.
 
-[[let&#39;s get out of this cave-&gt;path to sea cottage]]</tw-passagedata><tw-passagedata pid="47" name="no key" tags="" position="1725,1225" size="100,100">
-[[let&#39;s get out of this cave-&gt;path to sea cottage]]</tw-passagedata><tw-passagedata pid="48" name="dishes" tags="" position="1025,1325" size="100,100">choose some plates for all those delicious meals you&#39;ll be cooking
+[[let&#39;s get out of this cave-&gt;path to sea cottage]]</tw-passagedata><tw-passagedata pid="45" name="no key" tags="" position="1725,1225" size="100,100">
+[[let&#39;s get out of this cave-&gt;path to sea cottage]]</tw-passagedata><tw-passagedata pid="46" name="dishes" tags="" position="1025,1325" size="100,100">choose some plates for all those delicious meals you&#39;ll be cooking
 
-(link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/blueplates.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;bedding&quot;)[(set:$plates to 1)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/glassplates.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;bedding&quot;)[(set:$plates to 2)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/lemonplates.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;bedding&quot;)[(set:$plates to 3)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/botanicalplates.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;bedding&quot;)[(set:$plates to 4)]</tw-passagedata><tw-passagedata pid="49" name="candle" tags="" position="900,1325" size="100,100">choose a fancy candle
+(link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/blueplates.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;bedding&quot;)[(set:$plates to 1)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/glassplates.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;bedding&quot;)[(set:$plates to 2)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/lemonplates.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;bedding&quot;)[(set:$plates to 3)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/botanicalplates.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;bedding&quot;)[(set:$plates to 4)]</tw-passagedata><tw-passagedata pid="47" name="candle" tags="" position="900,1325" size="100,100">choose a fancy candle
 
-(link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/byredocandle.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;dishes&quot;)[(set:$candle to 1)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/diorcandle.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;dishes&quot;)[(set:$candle to 2)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/diptyquecandle.jpeg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;dishes&quot;)[(set:$candle to 3)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/ruecandle.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;dishes&quot;)[(set:$candle to 4)]</tw-passagedata><tw-passagedata pid="50" name="bedding" tags="" position="1150,1325" size="100,100">choose a place to keep dreaming ...
+(link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/byredocandle.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;dishes&quot;)[(set:$candle to 1)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/diorcandle.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;dishes&quot;)[(set:$candle to 2)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/diptyquecandle.jpeg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;dishes&quot;)[(set:$candle to 3)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/ruecandle.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;dishes&quot;)[(set:$candle to 4)]</tw-passagedata><tw-passagedata pid="48" name="bedding" tags="" position="1150,1325" size="100,100">choose a place to keep dreaming ...
 
-(link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/greybed.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;playlist&quot;)[(set:$bedding to 1)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/royalbed.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;playlist&quot;)[(set:$bedding to 2)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/whitebed.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;playlist&quot;)[(set:$bedding to 3)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/yellowbed.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;playlist&quot;)[(set:$bedding to 4)]</tw-passagedata><tw-passagedata pid="51" name="level 5" tags="" position="650,1950" size="100,100">&lt;div class=&quot;pincontainer&quot; height=&quot;401&quot; width=&quot;236&quot;&gt;
+(link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/greybed.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;playlist&quot;)[(set:$bedding to 1)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/royalbed.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;playlist&quot;)[(set:$bedding to 2)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/whitebed.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;playlist&quot;)[(set:$bedding to 3)] (link-reveal-goto: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/cottage/yellowbed.jpg&quot; class=&quot;snug&quot;&gt;&#39;, &quot;playlist&quot;)[(set:$bedding to 4)]</tw-passagedata><tw-passagedata pid="49" name="level 5" tags="" position="650,1950" size="100,100">&lt;div class=&quot;pincontainer&quot; height=&quot;401&quot; width=&quot;236&quot;&gt;
     &lt;iframe src=&quot;https://assets.pinterest.com/ext/embed.html?id=129689664262108996&quot; height=&quot;401&quot; width=&quot;236&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; &gt;&lt;/iframe&gt;
     &lt;div class=&quot;coverpin&quot;&gt;
         (link-goto: &#39;&lt;img src=&quot;transparent-square.png&quot; height=&quot;401&quot; width=&quot;236&quot;&gt;&#39;, &quot;kitchen&quot;)
@@ -393,7 +406,7 @@ now you have a key! nice.
   &lt;/div&gt;
   
   &lt;div class=&quot;level&quot;&gt;(link-goto: &quot;level 5:
-  is it chill that you&#39;re in my head?&quot;, &quot;kitchen&quot;)&lt;/div&gt;</tw-passagedata><tw-passagedata pid="52" name="kitchen" tags="" position="800,1950" size="100,100">ok, $name, i&#39;ve got a challenge for you!
+  is it chill that you&#39;re in my head?&quot;, &quot;kitchen&quot;)&lt;/div&gt;</tw-passagedata><tw-passagedata pid="50" name="kitchen" tags="" position="800,1950" size="100,100">ok, $name, i&#39;ve got a challenge for you!
 
 (click: &quot;challenge&quot;)[today, you&#39;re going to try to make a love potion!
 
@@ -401,7 +414,7 @@ now you have a key! nice.
 ]
 ]
 
-</tw-passagedata><tw-passagedata pid="53" name="kitchen cupboards" tags="" position="925,2050" size="100,100">inside the cupboard, you find:
+</tw-passagedata><tw-passagedata pid="51" name="kitchen cupboards" tags="" position="925,2050" size="100,100">inside the cupboard, you find:
 
 (set: $ingredients to (ds: &quot;cinnamon&quot;, &quot;salt&quot;, &quot;a bulb of garlic&quot;))cinnamon, salt, a bulb of garlic, (if: $personality is an even)[(set: $ingredients to it + (ds: &quot;lavender&quot;, &quot;almond butter&quot;, &quot;cloves&quot;))lavender, almond butter, cloves,] (if: $personality is an odd)[(set: $ingredients to it + (ds: &quot;lemon balm&quot;, &quot;nutmeg&quot;, &quot;honey&quot;))lemon balm, nutmeg, honey,] (if: $cottage is &quot;beach&quot;)[(set: $ingredients to it + (ds: &quot;bloodroot blossoms&quot;, &quot;basil&quot;, &quot;chicken foot&quot;))bloodroot blossoms, basil, and a chicken foot.] (if: $cottage is &quot;woodland&quot;)[and (set: $ingredients to it + (ds: &quot;chili pepper&quot;))chili pepper.]
 
@@ -416,34 +429,34 @@ we can also go search for other ingredients.
 (click-goto: &quot;in the fields&quot;, &quot;search fields&quot;)
 (click-goto: &quot;in the woods&quot;, &quot;search woods&quot;)
 (click-goto: &quot;in the hidden lagoon&quot;, &quot;search lagoon&quot;)
-(click-goto: &quot;in the cave by the sea&quot;, &quot;search cave&quot;)</tw-passagedata><tw-passagedata pid="54" name="beach cottage yard" tags="" position="925,1925" size="100,100">(set: $ingredients to it + (ds: &quot;seagrass&quot;))there&#39;s some seagrass out here that we can gather.
+(click-goto: &quot;in the cave by the sea&quot;, &quot;search cave&quot;)</tw-passagedata><tw-passagedata pid="52" name="beach cottage yard" tags="" position="925,1925" size="100,100">(set: $ingredients to it + (ds: &quot;seagrass&quot;))there&#39;s some seagrass out here that we can gather.
 
 (click: &quot;gather&quot;)[(set: $ingredients to it + (ds: &quot;wishbone&quot;))you also find a wishbone in the sand.
 (display: &quot;places to search&quot;)
-]</tw-passagedata><tw-passagedata pid="55" name="woodland cottage garden" tags="" position="1050,1925" size="100,100">(set: $ingredients to it + (ds: &quot;rose petals&quot;))there are roses growing out here.
+]</tw-passagedata><tw-passagedata pid="53" name="woodland cottage garden" tags="" position="1050,1925" size="100,100">(set: $ingredients to it + (ds: &quot;rose petals&quot;))there are roses growing out here.
 
 (click: &quot;roses&quot;)[(set: $ingredients to it + (ds: &quot;basil&quot;, &quot;pokeberries&quot;))there&#39;s also basil and a wild pokeweed plant.
 (display: &quot;places to search&quot;)
-]</tw-passagedata><tw-passagedata pid="56" name="search fields" tags="" position="1175,1925" size="100,100">(set: $ingredients to it + (ds: &quot;black-eyed susans&quot;, &quot;queen anne&#39;s lace&quot;))the fields are abundant with black-eyed susans and queen anne&#39;s lace.
+]</tw-passagedata><tw-passagedata pid="54" name="search fields" tags="" position="1175,1925" size="100,100">(set: $ingredients to it + (ds: &quot;black-eyed susans&quot;, &quot;queen anne&#39;s lace&quot;))the fields are abundant with black-eyed susans and queen anne&#39;s lace.
 
 (click: &quot;fields&quot;)[(set: $ingredients to it + (ds: &quot;snakeskin&quot;))(set: $purse to it + 5)you also find a bit of snakeskin and a $5 bill.
 (display: &quot;places to search&quot;)
-]</tw-passagedata><tw-passagedata pid="57" name="search woods" tags="" position="1300,1925" size="100,100">(set: $ingredients to it + (ds: &quot;purple moss&quot;, &quot;dandelions&quot;))the forest floor is lined with purple moss and dandelions.
+]</tw-passagedata><tw-passagedata pid="55" name="search woods" tags="" position="1300,1925" size="100,100">(set: $ingredients to it + (ds: &quot;purple moss&quot;, &quot;dandelions&quot;))the forest floor is lined with purple moss and dandelions.
 
 (click: &quot;forest floor&quot;)[(set: $ingredients to it + (ds: &quot;bloodroot blossoms&quot;, &quot;willow bark&quot;))there&#39;s also a patch of bloodroot over here, and a willow tree with peeling bark.
 (display: &quot;places to search&quot;)
-]</tw-passagedata><tw-passagedata pid="58" name="search lagoon" tags="" position="1425,1925" size="100,100">(set: $ingredients to it + (ds: &quot;red seaweed&quot;))there&#39;s some red seaweed washed up along the shore.
+]</tw-passagedata><tw-passagedata pid="56" name="search lagoon" tags="" position="1425,1925" size="100,100">(set: $ingredients to it + (ds: &quot;red seaweed&quot;))there&#39;s some red seaweed washed up along the shore.
 
 (click: &quot;washed up&quot;)[(set: $ingredients to it + (ds: &quot;pearl&quot;))you also find a clamshell with a pearl in it.
 (display: &quot;places to search&quot;)
-]</tw-passagedata><tw-passagedata pid="59" name="search cave" tags="" position="1550,1925" size="100,100">the cave entrance is as narrow as ever. (link-reveal: &quot;once inside, you&#39;ll need to strike a match to see anything.&quot;)[ there&#39;s a moonstone in the center of the cave.
+]</tw-passagedata><tw-passagedata pid="57" name="search cave" tags="" position="1550,1925" size="100,100">the cave entrance is as narrow as ever. (link-reveal: &quot;once inside, you&#39;ll need to strike a match to see anything.&quot;)[ there&#39;s a moonstone in the center of the cave.
 
 (set: $purse to it + 1000)you also find $1000.
 
 (link: &quot;let&#39;s get out of here!&quot;)
 [(display: &quot;places to search&quot;)
 ]
-]</tw-passagedata><tw-passagedata pid="60" name="places to search" tags="" position="1125,1775" size="100,100">{
+]</tw-passagedata><tw-passagedata pid="58" name="places to search" tags="" position="1125,1775" size="100,100">{
 (if: (visited: &quot;cave&quot;) is true)[(unless: (visited: &quot;search cave&quot;) is true)[&lt;br&gt;&lt;span class=&quot;link1&quot;&gt;&lt;span id=&quot;arrow1&quot;&gt;&amp;#9654;&lt;/span&gt; [[try searching in the cave-&gt;search cave]]&lt;/span&gt;]]
 
 (if: (visited: &quot;lagoon&quot;) is true)[(unless: (visited: &quot;search lagoon&quot;) is true)[&lt;br&gt;&lt;span class=&quot;link2&quot;&gt;&lt;span id=&quot;arrow2&quot;&gt;&amp;#9654;&lt;/span&gt; [[try searching in the lagoon-&gt;search lagoon]]&lt;/span&gt;]]
@@ -457,7 +470,7 @@ we can also go search for other ingredients.
 (if: $cottage is &quot;woodland&quot;)[(unless: (visited: &quot;woodland cottage garden&quot;) is true)[&lt;br&gt;&lt;span class=&quot;link6&quot;&gt;&lt;span id=&quot;arrow6&quot;&gt;&amp;#9654;&lt;/span&gt; [[try searching in the garden behind the cottage-&gt;woodland cottage garden]]&lt;/span&gt;]]
 
 &lt;br&gt;&lt;span class=&quot;link7&quot;&gt;&lt;span id=&quot;arrow7&quot;&gt;&amp;#9654;&lt;/span&gt; [[head back to the cottage kitchen to make the potion-&gt;make potion]]&lt;/span&gt;
-}</tw-passagedata><tw-passagedata pid="61" name="make potion" tags="" position="1250,2125" size="100,100">(set: $almondbutter to false)(set: $basil to false)(set: $bloodroot to false)(set: $chickenfoot to false)(set: $chilipepper to false)(set: $chocolate to false)(set: $cinnamon to false)(set: $cloves to false)(set: $dandelion to false)(set: $garlic to false)(set: $ginger to false)(set: $honey to false)(set: $lavender to false)(set: $lemonbalm to false)(set: $moonstone to false)(set: $nutmeg to false)(set: $pearl to false)(set: $pokeberries to false)(set: $purplemoss to false)(set: $redseaweed to false)(set: $rosepetals to false)(set: $salt to false)(set: $seagrass to false)(set: $snakeskin to false)(set: $unicorntailhair to false)(set: $willow to false)(set: $wishbone to false)
+}</tw-passagedata><tw-passagedata pid="59" name="make potion" tags="" position="1250,2125" size="100,100">(set: $almondbutter to false)(set: $basil to false)(set: $bloodroot to false)(set: $chickenfoot to false)(set: $chilipepper to false)(set: $chocolate to false)(set: $cinnamon to false)(set: $cloves to false)(set: $dandelion to false)(set: $garlic to false)(set: $ginger to false)(set: $honey to false)(set: $lavender to false)(set: $lemonbalm to false)(set: $moonstone to false)(set: $nutmeg to false)(set: $pearl to false)(set: $pokeberries to false)(set: $purplemoss to false)(set: $redseaweed to false)(set: $rosepetals to false)(set: $salt to false)(set: $seagrass to false)(set: $snakeskin to false)(set: $unicorntailhair to false)(set: $willow to false)(set: $wishbone to false)
 this is the fun part! choose all the ingredients you&#39;d like to add to the potion. you can use as many as you&#39;d like, but i recommend at least 4.
 {
 (if: $creaturetype is &quot;unicorn&quot;)[(set: $ingredients to it + (ds: &quot;unicorn tail hair&quot;))&lt;br&gt;oh! and since you&#39;re a unicorn, you have one extra magical ingredient you can use: your tail hair.]}
@@ -519,7 +532,7 @@ this is the fun part! choose all the ingredients you&#39;d like to add to the po
 
 (if:$ingredients contains &quot;wishbone&quot;)[(checkbox: bind $wishbone, &quot;wishbone&quot;)]}
 
-(button:&quot;=X=&quot;)[[continue-&gt;potion mixing]]</tw-passagedata><tw-passagedata pid="62" name="potion mixing" tags="" position="1400,2125" size="100,100">{(set: $love to 0)(set: $dream to 0)
+(button:&quot;=X=&quot;)[[continue-&gt;potion mixing]]</tw-passagedata><tw-passagedata pid="60" name="potion mixing" tags="" position="1400,2125" size="100,100">{(set: $love to 0)(set: $dream to 0)
 (if: $basil is true)[(set: $love to it + 2)]
 (if: $chilipepper is true)[(set: $love to it + 1)]
 (if: $cinnamon is true)[(set: $love to it + 1)]
@@ -543,7 +556,7 @@ you might want to try one of these methods - although i&#39;m not sure if any of
 ]
 (click: ?potion)[(replace: ?options)(display:&quot;potion result&quot;)]
 
-</tw-passagedata><tw-passagedata pid="63" name="potion result" tags="" position="1525,2125" size="100,100">{(if: $pokeberries is true)[(set: $potion to &quot;poison&quot;)it&#39;s a dark, muddy color.]
+</tw-passagedata><tw-passagedata pid="61" name="potion result" tags="" position="1525,2125" size="100,100">{(if: $pokeberries is true)[(set: $potion to &quot;poison&quot;)it&#39;s a dark, muddy color.]
 
 (else-if: $love is &gt;= 3)[(set: $potion to &quot;love&quot;)it&#39;s a pale pink color with a pearl-like sheen.]
 
@@ -563,14 +576,14 @@ no thanks
 (if: $potion is &quot;nothing&quot;)[(go-to: &quot;nothing&quot;)]
 ]
 
-(click: &quot;no thanks&quot;)[(go-to: &quot;level 6&quot;)]</tw-passagedata><tw-passagedata pid="64" name="poison" tags="" position="1650,2050" size="100,100">&lt;h2&gt;game over&lt;/h2&gt;
+(click: &quot;no thanks&quot;)[(go-to: &quot;level 6&quot;)]</tw-passagedata><tw-passagedata pid="62" name="poison" tags="" position="1650,2050" size="100,100">&lt;h2&gt;game over&lt;/h2&gt;
 that was poison! luckily, there&#39;s an antidote, but you&#39;re probably going to be in bed for a week... at least you can get caught up on some tv.
 
-&lt;span class=&quot;link1&quot;&gt;&lt;span id=&quot;arrow1&quot;&gt;&amp;#9654;&lt;/span&gt; start a new game (click:&quot;start a new game&quot;)[(restart:)]&lt;/span&gt;</tw-passagedata><tw-passagedata pid="65" name="irresistible" tags="" position="1400,2250" size="100,100">(set: $lovespell to true)
+&lt;span class=&quot;link1&quot;&gt;&lt;span id=&quot;arrow1&quot;&gt;&amp;#9654;&lt;/span&gt; start a new game (click:&quot;start a new game&quot;)[(restart:)]&lt;/span&gt;</tw-passagedata><tw-passagedata pid="63" name="irresistible" tags="" position="1400,2250" size="100,100">(set: $lovespell to true)
 
 you immediately feel `* ~ * ~ irresistible * ~ * ~`! the potion worked!
 
-&lt;span class=&quot;link1&quot;&gt;&lt;span id=&quot;arrow1&quot;&gt;&amp;#9654;&lt;/span&gt; [[continue-&gt;level 6]]&lt;/span&gt;</tw-passagedata><tw-passagedata pid="66" name="level 6" tags="" position="650,2400" size="100,100">&lt;div class=&quot;pincontainer&quot; height=&quot;408&quot; width=&quot;236&quot;&gt;
+&lt;span class=&quot;link1&quot;&gt;&lt;span id=&quot;arrow1&quot;&gt;&amp;#9654;&lt;/span&gt; [[continue-&gt;level 6]]&lt;/span&gt;</tw-passagedata><tw-passagedata pid="64" name="level 6" tags="" position="650,2400" size="100,100">&lt;div class=&quot;pincontainer&quot; height=&quot;408&quot; width=&quot;236&quot;&gt;
    &lt;iframe src=&quot;https://assets.pinterest.com/ext/embed.html?id=129689664262111205&quot; height=&quot;408&quot; width=&quot;236&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; &gt;&lt;/iframe&gt;
     &lt;div class=&quot;coverpin&quot;&gt;
         (link-goto: &#39;&lt;img src=&quot;transparent-square.png&quot; height=&quot;408&quot; width=&quot;236&quot;&gt;&#39;, &quot;shopping rules&quot;)
@@ -578,28 +591,78 @@ you immediately feel `* ~ * ~ irresistible * ~ * ~`! the potion worked!
   &lt;/div&gt;
   
   &lt;div class=&quot;level&quot;&gt;(link-goto: &quot;level 6:
-  beautiful girls love beautiful stuff&quot;, &quot;shopping rules&quot;)&lt;/div&gt;</tw-passagedata><tw-passagedata pid="67" name="wake up" tags="" position="1650,2175" size="100,100">&lt;h2&gt;game over&lt;/h2&gt;
+  beautiful girls love beautiful stuff&quot;, &quot;shopping rules&quot;)&lt;/div&gt;</tw-passagedata><tw-passagedata pid="65" name="wake up" tags="" position="1700,2225" size="100,100">&lt;h2&gt;game over&lt;/h2&gt;
 you open your eyes. it was all a dream...
 
-&lt;span class=&quot;link1&quot;&gt;&lt;span id=&quot;arrow1&quot;&gt;&amp;#9654;&lt;/span&gt; start a new game (click:&quot;start a new game&quot;)[(restart:)]&lt;/span&gt;</tw-passagedata><tw-passagedata pid="68" name="nothing" tags="" position="1525,2250" size="100,100">nothing happens.
+{(if: (history:)&#39;s last is &quot;outfit&quot;)[&lt;span class=&quot;link1&quot;&gt;&lt;span id=&quot;arrow1&quot;&gt;&amp;#9654;&lt;/span&gt; (link-rerun: &quot;la vie en rose `[external link to pinterest]`&quot;)[(open-url: &quot;https://www.pinterest.com/marykellyreed/w-h-i-s-p-e-r-l-a-n-d/la-vie-en-rose/&quot;)]&lt;/span&gt;]
+}
+&lt;span class=&quot;link2&quot;&gt;&lt;span id=&quot;arrow2&quot;&gt;&amp;#9654;&lt;/span&gt; start a new game (click:&quot;start a new game&quot;)[(restart:)]&lt;/span&gt;</tw-passagedata><tw-passagedata pid="66" name="nothing" tags="" position="1525,2250" size="100,100">nothing happens.
 
-&lt;span class=&quot;link1&quot;&gt;&lt;span id=&quot;arrow1&quot;&gt;&amp;#9654;&lt;/span&gt; [[continue-&gt;level 6]]&lt;/span&gt;</tw-passagedata><tw-passagedata pid="69" name="shopping" tags="" position="925,2450" size="100,100">(set:$purse to it + 0)&lt;span style=&quot;float:left&quot;&gt;get money.&lt;/span&gt;&lt;span style=&quot;float:right&quot;&gt;(click-rerun:&quot;get money.&quot;)[(set:$purse to it + 100) [(replace: ?total)[you currently have $(print:$purse).]]][you currently have $(print:$purse).]&lt;total|&lt;/span&gt;
+&lt;span class=&quot;link1&quot;&gt;&lt;span id=&quot;arrow1&quot;&gt;&amp;#9654;&lt;/span&gt; [[continue-&gt;level 6]]&lt;/span&gt;</tw-passagedata><tw-passagedata pid="67" name="shopping" tags="" position="925,2475" size="100,100">(set:$purse to it + 0)&lt;span style=&quot;float:left&quot;&gt;get money.&lt;/span&gt;&lt;span style=&quot;float:right&quot;&gt;(click-rerun:&quot;get money.&quot;)[(set:$purse to it + 100) [(replace: ?total)[you currently have $(print:$purse).]]][you currently have $(print:$purse).]&lt;total|&lt;/span&gt;
 
 &lt;div class=&quot;treasure&quot;&gt;
-(link: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/outfits/gnometop.jpg&quot; class=&quot;snug&quot;&gt;&#39;)
-[(set:$purse to it - 60)&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/outfits/gnometop.jpg&quot; class=&quot;purchased&quot;&gt;(replace: ?total)[you currently have $(print:$purse).](replace: ?price1)[purchased]]
-&lt;div class=&quot;price&quot;&gt;[$60]&lt;price1|&lt;/div&gt;
+(link: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/shopping/1-89.jpg&quot; class=&quot;snug&quot;&gt;&#39;)
+[(set:$purse to it - 89)&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/shopping/1-89.jpg&quot; class=&quot;purchased&quot;&gt;(replace: ?total)[you currently have $(print:$purse).](replace: ?price1)[purchased]]
+&lt;div class=&quot;price&quot;&gt;[$89]&lt;price1|&lt;/div&gt;
 &lt;/div&gt;&lt;div class=&quot;treasure&quot;&gt;
-(link: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/outfits/mermaidshoes.jpg&quot; class=&quot;snug&quot;&gt;&#39;)
-[(set:$purse to it - 240)&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/outfits/mermaidshoes.jpg&quot; class=&quot;purchased&quot;&gt;(replace: ?total)[you currently have $(print:$purse).](replace: ?price2)[purchased]]
-&lt;div class=&quot;price&quot;&gt;[$240]&lt;price2|&lt;/div&gt;
+(link: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/shopping/2-280.jpg&quot; class=&quot;snug&quot;&gt;&#39;)
+[(set:$purse to it - 280)&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/shopping/2-280.jpg&quot; class=&quot;purchased&quot;&gt;(replace: ?total)[you currently have $(print:$purse).](replace: ?price2)[purchased]]
+&lt;div class=&quot;price&quot;&gt;[$280]&lt;price2|&lt;/div&gt;
 &lt;/div&gt;&lt;div class=&quot;treasure&quot;&gt;
-(link: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/outfits/fairyshoes.jpg&quot; class=&quot;snug&quot;&gt;&#39;)
-[(set:$purse to it - 500)&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/outfits/fairyshoes.jpg&quot; class=&quot;purchased&quot;&gt;(replace: ?total)[you currently have $(print:$purse).](replace: ?price3)[purchased]]
-&lt;div class=&quot;price&quot;&gt;[$500]&lt;price3|&lt;/div&gt;
+(link: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/shopping/3-28.jpg&quot; class=&quot;snug&quot;&gt;&#39;)
+[(set:$purse to it - 28)&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/shopping/3-28.jpg&quot; class=&quot;purchased&quot;&gt;(replace: ?total)[you currently have $(print:$purse).](replace: ?price3)[purchased]]
+&lt;div class=&quot;price&quot;&gt;[$28]&lt;price3|&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&quot;treasure&quot;&gt;
+(link: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/shopping/4-2450.jpg&quot; class=&quot;snug&quot;&gt;&#39;)
+[(set:$purse to it - 2450)&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/shopping/4-2450.jpg&quot; class=&quot;purchased&quot;&gt;(replace: ?total)[you currently have $(print:$purse).](replace: ?price4)[purchased]]
+&lt;div class=&quot;price&quot;&gt;[$2450]&lt;price4|&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&quot;treasure&quot;&gt;
+(link: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/shopping/5-74.jpg&quot; class=&quot;snug&quot;&gt;&#39;)
+[(set:$purse to it - 74)&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/shopping/5-74.jpg&quot; class=&quot;purchased&quot;&gt;(replace: ?total)[you currently have $(print:$purse).](replace: ?price5)[purchased]]
+&lt;div class=&quot;price&quot;&gt;[$74]&lt;price5|&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&quot;treasure&quot;&gt;
+(link: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/shopping/6-176.jpg&quot; class=&quot;snug&quot;&gt;&#39;)
+[(set:$purse to it - 176)&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/shopping/6-176.jpg&quot; class=&quot;purchased&quot;&gt;(replace: ?total)[you currently have $(print:$purse).](replace: ?price6)[purchased]]
+&lt;div class=&quot;price&quot;&gt;[$176]&lt;price6|&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&quot;treasure&quot;&gt;
+(link: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/shopping/7-1430.jpg&quot; class=&quot;snug&quot;&gt;&#39;)
+[(set:$purse to it - 1430)&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/shopping/7-1430.jpg&quot; class=&quot;purchased&quot;&gt;(replace: ?total)[you currently have $(print:$purse).](replace: ?price7)[purchased]]
+&lt;div class=&quot;price&quot;&gt;[$1430]&lt;price7|&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&quot;treasure&quot;&gt;
+(link: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/shopping/8-155.jpg&quot; class=&quot;snug&quot;&gt;&#39;)
+[(set:$purse to it - 155)&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/shopping/8-155.jpg&quot; class=&quot;purchased&quot;&gt;(replace: ?total)[you currently have $(print:$purse).](replace: ?price8)[purchased]]
+&lt;div class=&quot;price&quot;&gt;[$155]&lt;price8|&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&quot;treasure&quot;&gt;
+(link: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/shopping/9-168.jpg&quot; class=&quot;snug&quot;&gt;&#39;)
+[(set:$purse to it - 168)&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/shopping/9-168.jpg&quot; class=&quot;purchased&quot;&gt;(replace: ?total)[you currently have $(print:$purse).](replace: ?price9)[purchased]]
+&lt;div class=&quot;price&quot;&gt;[$168]&lt;price9|&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&quot;treasure&quot;&gt;
+(link: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/shopping/10-98.jpg&quot; class=&quot;snug&quot;&gt;&#39;)
+[(set:$purse to it - 98)&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/shopping/10-98.jpg&quot; class=&quot;purchased&quot;&gt;(replace: ?total)[you currently have $(print:$purse).](replace: ?price10)[purchased]]
+&lt;div class=&quot;price&quot;&gt;[$98]&lt;price10|&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&quot;treasure&quot;&gt;
+(link: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/shopping/11-160.jpg&quot; class=&quot;snug&quot;&gt;&#39;)
+[(set:$purse to it - 160)&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/shopping/11-160.jpg&quot; class=&quot;purchased&quot;&gt;(replace: ?total)[you currently have $(print:$purse).](replace: ?price11)[purchased]]
+&lt;div class=&quot;price&quot;&gt;[$160]&lt;price11|&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&quot;treasure&quot;&gt;
+(link: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/shopping/12-69.jpg&quot; class=&quot;snug&quot;&gt;&#39;)
+[(set:$purse to it - 69)&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/shopping/12-69.jpg&quot; class=&quot;purchased&quot;&gt;(replace: ?total)[you currently have $(print:$purse).](replace: ?price12)[purchased]]
+&lt;div class=&quot;price&quot;&gt;[$69]&lt;price12|&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&quot;treasure&quot;&gt;
+(link: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/shopping/13-21.jpg&quot; class=&quot;snug&quot;&gt;&#39;)
+[(set:$purse to it - 21)&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/shopping/13-21.jpg&quot; class=&quot;purchased&quot;&gt;(replace: ?total)[you currently have $(print:$purse).](replace: ?price13)[purchased]]
+&lt;div class=&quot;price&quot;&gt;[$21]&lt;price13|&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&quot;treasure&quot;&gt;
+(link: &#39;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/shopping/14-1300.jpg&quot; class=&quot;snug&quot;&gt;&#39;)
+[(set:$purse to it - 1300)&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/shopping/14-1300.jpg&quot; class=&quot;purchased&quot;&gt;(replace: ?total)[you currently have $(print:$purse).](replace: ?price14)[purchased]]
+&lt;div class=&quot;price&quot;&gt;[$1300]&lt;price14|&lt;/div&gt;
 &lt;/div&gt;
 
-(button:&quot;=X=&quot;)[[continue-&gt;level 7]]</tw-passagedata><tw-passagedata pid="70" name="shopping rules" tags="" position="800,2450" size="100,100">you deserve a treat after narrowly escaping death-by-unknown-potion!
+&lt;div style=&quot;clear: left;&quot;&gt;
+&lt;br&gt;(button:&quot;=X=&quot;)[[continue-&gt;level 7]]
+
+&lt;span class=&quot;link1&quot;&gt;&lt;span id=&quot;arrow1&quot;&gt;&amp;#9654;&lt;/span&gt; (link-rerun: &quot;go shopping irl `[external link to pinterest]`&quot;)[(open-url: &quot;https://www.pinterest.com/marykellyreed/w-h-i-s-p-e-r-l-a-n-d/shopping-spree/&quot;)]&lt;/span&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="68" name="shopping rules" tags="" position="800,2425" size="100,100">you deserve a treat after narrowly escaping death-by-unknown-potion!
 
 (link: &quot;...&quot;)[he, he. just kidding...
 
@@ -610,7 +673,7 @@ let&#39;s go shopping!
 once you&#39;re done shopping, click the &quot;continue&quot; button at the bottom of the page.
 
 [[ok!-&gt;shopping]]]
-]</tw-passagedata><tw-passagedata pid="71" name="level 7" tags="" position="650,2625" size="100,100">&lt;div class=&quot;pincontainer&quot; height=&quot;410&quot; width=&quot;236&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="69" name="level 7" tags="" position="650,2625" size="100,100">&lt;div class=&quot;pincontainer&quot; height=&quot;410&quot; width=&quot;236&quot;&gt;
    &lt;iframe src=&quot;https://assets.pinterest.com/ext/embed.html?id=129689664262111283&quot; height=&quot;410&quot; width=&quot;236&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; &gt;&lt;/iframe&gt;
     &lt;div class=&quot;coverpin&quot;&gt;
         (link-goto: &#39;&lt;img src=&quot;transparent-square.png&quot; height=&quot;410&quot; width=&quot;236&quot;&gt;&#39;, &quot;surprise!&quot;)
@@ -618,7 +681,81 @@ once you&#39;re done shopping, click the &quot;continue&quot; button at the bott
   &lt;/div&gt;
   
   &lt;div class=&quot;level&quot;&gt;(link-goto: &quot;level 7:
-  la vie en rose&quot;, &quot;surprise!&quot;)&lt;/div&gt;</tw-passagedata><tw-passagedata pid="72" name="surprise!" tags="" position="800,2625" size="100,100">we&#39;re going to paris!!!</tw-passagedata></tw-storydata>
+  la vie en rose&quot;, &quot;surprise!&quot;)&lt;/div&gt;</tw-passagedata><tw-passagedata pid="70" name="surprise!" tags="" position="800,2625" size="100,100">i have a surprise for you!! you might have already figured it out, but i&#39;m going to make you guess anyway.
+
+fill in the blanks, and away we go!
+
+(input: bind $vehicle, &quot;=XX=&quot;, &quot;type of vehicle&quot;)
+(input: bind $number, &quot;=XX=&quot;, &quot;number&quot;)
+(input: bind $adjective1, &quot;=XX=&quot;, &quot;adjective&quot;)
+(input: bind $pastry, &quot;=XX=&quot;, &quot;type of pastry&quot;)
+(input: bind $verbing, &quot;=XX=&quot;, &quot;verb ending in -ing&quot;)
+(input: bind $name2, &quot;=XX=&quot;, &quot;person&#39;s name&quot;)
+(input: bind $pluralnoun1, &quot;=XX=&quot;, &quot;plural noun&quot;)
+(input: bind $adjective2, &quot;=XX=&quot;, &quot;adjective&quot;)
+(input: bind $pluralnoun2, &quot;=XX=&quot;, &quot;plural noun&quot;)
+(input: bind $exclamation, &quot;=XX=&quot;, &quot;exclamation&quot;)
+
+(button:&quot;=X=&quot;)[[tell me, tell me!-&gt;we&#39;re going to paris]]</tw-passagedata><tw-passagedata pid="71" name="hotel" tags="" position="1100,2625" size="100,100">you have $(print: $purse).
+
+{
+(if: $purse / 4 &lt; 159)[oh, no! you don&#39;t have enough for a hotel. i guess we&#39;ll have to [[sleep on the floor-&gt;my paris story]] of the gare du nord.]
+
+(else-if: $purse is &lt; 203)[you have enough for four nights at this hotel!
+
+[[&lt;br&gt;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/lavie/hotel-rochechouart-159.jpg&quot; class=&quot;hotel&quot;&gt;-&gt;my paris story]]]
+
+(else-if: $purse / 4 is &lt; 392)[you have enough for four nights at one of these hotels!
+
+[[&lt;br&gt;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/lavie/hotel-rochechouart-159.jpg&quot; class=&quot;hotel&quot;&gt;&amp;nbsp;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/lavie/hotel-les-dames-du-pantheon-203.jpg&quot; class=&quot;hotel&quot;&gt;-&gt;my paris story]]]
+
+(else-if: $purse / 4 is &lt; 427)[you have enough for four nights at one of these hotels!
+
+[[&lt;br&gt;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/lavie/hotel-rochechouart-159.jpg&quot; class=&quot;hotel&quot;&gt;&amp;nbsp;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/lavie/hotel-les-dames-du-pantheon-203.jpg&quot; class=&quot;hotel&quot;&gt;&amp;nbsp;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/lavie/hotel-bowmann-392.jpg&quot; class=&quot;hotel&quot;&gt;-&gt;my paris story]]]
+
+(else: )[you have enough for four nights at one of these hotels!
+
+[[&lt;br&gt;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/lavie/hotel-rochechouart-159.jpg&quot; class=&quot;hotel&quot;&gt;&amp;nbsp;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/lavie/hotel-les-dames-du-pantheon-203.jpg&quot; class=&quot;hotel&quot;&gt;&amp;nbsp;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/lavie/hotel-bowmann-392.jpg&quot; class=&quot;hotel&quot;&gt;&amp;nbsp;&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/lavie/lhotel-427.jpeg&quot; class=&quot;hotel&quot;&gt;-&gt;my paris story]]]
+}</tw-passagedata><tw-passagedata pid="72" name="we&#39;re going to paris" tags="" position="950,2625" size="100,100">first, we&#39;re going to board a (print: $vehicle) and take a (print: $number)-hour journey across the ocean. when we arrive, we must get a (print: $adjective1) (print: $pastry) immediately! then we&#39;ll go to the famous (print: $verbing) street, and make sure to take pictures of st. (print: $name2)&#39;s cathedral. you have to buy lots of (print: $pluralnoun1) and (print: $adjective2) (print: $pluralnoun2)!
+
+(print: $exclamation) we&#39;re going to paris, (print: $name)!
+
+(click: &quot;paris&quot;)[i&#39;ll get the plane tickets, but you&#39;ll have to cover the hotel. how much money do you have left?
+
+(click-goto: &quot;money&quot;, &quot;hotel&quot;)
+]</tw-passagedata><tw-passagedata pid="73" name="my paris story" tags="" position="1275,2625" size="100,100">i&#39;m so excited for our trip!
+
+the last time i was in paris...
+
+(click: &quot;the last time&quot;)[there were five of us. we took a boat ride on the seine and howled at the moon.
+
+(click: &quot;howled at the moon&quot;)[afterwards, we took a walk over one of the bridges that crisscross the river...
+
+the bridge was covered with rose petals. the moon was full.
+
+(click: &quot;rose petals&quot;)[oh! [[that reminds me!-&gt;outfit]]
+]
+]
+]</tw-passagedata><tw-passagedata pid="74" name="outfit" tags="" position="1450,2625" size="100,100">i got you a new outfit for our trip!
+
+{(if: $creaturetype is &quot;witch&quot;)[&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/lavie/witch.jpg&quot; class=&quot;snug&quot;&gt;]
+
+(if: $creaturetype is &quot;fairy princess&quot;)[&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/lavie/fairy.jpg&quot; class=&quot;snug&quot;&gt;]
+
+(if: $creaturetype is &quot;unicorn&quot;)[&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/lavie/unicorn.jpg&quot; class=&quot;snug&quot;&gt;]
+
+(if: $creaturetype is &quot;gnome&quot;)[&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/lavie/gnome.jpg&quot; class=&quot;snug&quot;&gt;]
+
+(if: $creaturetype is &quot;mermaid&quot;)[&lt;img src=&quot;https://www.dangerous-angels.net/whisperland/lavie/mermaid.jpg&quot; class=&quot;snug&quot;&gt;]}
+
+(if: $potion is &quot;love&quot;)[oh, and you have the love potion! you are absolutely going to meet the $creaturetype of your dreams in paris.]
+
+&lt;span class=&quot;link1&quot;&gt;&lt;span id=&quot;arrow1&quot;&gt;&amp;#9654;&lt;/span&gt; [[let&#39;s go-&gt;wake up]]&lt;/span&gt;</tw-passagedata><tw-passagedata pid="75" name="boy" tags="" position="925,1725" size="100,100">there was a boy in my class who made fun of my catalog. specifically, he laughed at the pages where you could buy dresses to match your doll.
+
+(click: &quot;laughed&quot;)[don&#39;t ever let anyone tell you clothes aren&#39;t important.
+
+&lt;span class=&quot;link1&quot;&gt;&lt;span id=&quot;arrow1&quot;&gt;&amp;#9654;&lt;/span&gt; [[continue-&gt;level 5]]&lt;/span&gt;
+]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
