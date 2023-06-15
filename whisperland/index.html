@@ -11,10 +11,12 @@
 
 body {background-color:#f0d1de; background:url('pinkhearts-whimsical.gif'); margin: 0;}
 
-h1 {font-family: 'Lucida Console', monospace; text-align:center; font-size: 3.25rem; color:#ac98b4;
-  letter-spacing: 15px; font-weight:bold; -webkit-text-stroke: 2px #f2f3f2; line-height: 0.25;}
+h1 {font-family: Upright, monospace; text-align:center; font-size: 6rem; color: #fff;
+  letter-spacing: -2px; font-weight: 900; font-stretch: ultra-expanded; -webkit-text-stroke: 0.25px #000; line-height: 0.25;}
 
-h2 {font-family: 'Lucida Console', monospace; text-align:center; font-size: 2rem; color:#f2f3f2;
+  @font-face {font-family: Upright; src: url(Upright.otf);}
+
+h2 {font-family: 'Lucida Console', monospace; text-align:center; font-size: 2rem; color:#fff;
   letter-spacing: 10px; font-style: italic; line-height: 0.5;}
 
 ul {list-style-type: "♡ ";}
@@ -82,7 +84,6 @@ function gameplay() {document.getElementById("change").innerHTML = "The game is 
 
   <div class="welcome">
     <h1>whisperland</h1>
-    <h2>the game</h2>
     <p><i>whisperland</i> is a pinterest-inspired role playing game. gameplay takes about 10-15 minutes.</p>
     <p>system requirements:</p>
         <ul>
@@ -98,17 +99,18 @@ function gameplay() {document.getElementById("change").innerHTML = "The game is 
   </div>
 
   <div class="credits">
-note: the game will occasionally ask you to provide text input. any information you submit is used only in-game; it is not saved or submitted anywhere.
+  note: the game will occasionally ask you to provide text input. any information you submit is used only in-game; it is not saved or submitted anywhere.
+
+<div class="pinboard">
+<a data-pin-do="embedBoard" data-pin-board-width="400" data-pin-scale-height="240" data-pin-scale-width="80" href="https://www.pinterest.com/marykellyreed/w-h-i-s-p-e-r-l-a-n-d/"></a>
+</div>
+
     <p><center>*credits*</center></p>
     <ul>
         <li>repeating hearts background from <a href="http://whimsical.heartette.net/" target="_blank">whimsical</a></li>
         <li>whisperland is coded using <a href="https://twinery.org/" target="_blank">twine</a> (harlowe 3.3.5) and <a href="https://code.visualstudio.com/" target="_blank">visual studio code</a></li>
-        <li>i do not own pinterest. all pins featured in the game can be found on the board linked below.</li>
+        <li>i do not own pinterest. all pins featured in the game can be found on the board linked above.</li>
     </ul>
-
-    <div class="pinboard">
-    <a data-pin-do="embedBoard" data-pin-board-width="400" data-pin-scale-height="240" data-pin-scale-width="80" href="https://www.pinterest.com/marykellyreed/w-h-i-s-p-e-r-l-a-n-d/"></a>
-    </div>
 
   </div>
 
